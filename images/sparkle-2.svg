@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="57.6859" height="57.6859" viewBox="0 0 57.6859 57.6859" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 4" filter="url(#filter0_f_0_6)">
+<circle id="Ellipse 5" cx="28.7357" cy="28.7357" r="5.4247" fill="white"/>
+<g id="Repeat group 1">
+<g id="Repeat group 1_inner" data-figma-trr="r6u0.7-0f">
+<path id="Polygon 3" d="M28.8432 4.57473L30.8213 25.988H26.8651L28.8432 4.57473Z" fill="white" fill-opacity="0.4"/>
+</g>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(39.4005 -10.5574) rotate(60)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(68.2437 18.2858) rotate(120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(57.6864 57.6862) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(18.2859 68.2436) rotate(-120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-10.5573 39.4005) rotate(-60)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_6" x="0" y="0" width="57.6859" height="57.6859" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.23365" result="effect1_foregroundBlur_0_6"/>
+</filter>
+</defs>
+</svg>

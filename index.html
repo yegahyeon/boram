@@ -1,0 +1,1930 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>벨류에셋 | 보람피플 올인원598</title>
+</head>
+<body style="margin:0;background:#fafafa">
+
+<!-- ===================== 아임웹 붙여넣기 시작 =====================
+  · 아임웹 '코드' 위젯(HTML)에 이 주석부터 '붙여넣기 끝' 주석까지 그대로 붙여넣으세요.
+  · 위젯이 들어가는 섹션은 '전체 너비(풀 와이드)' + 여백 0 으로 설정해야 디자인대로 보입니다.
+  · 이미지는 images/ 폴더 파일을 아임웹(또는 외부 호스팅)에 업로드한 뒤,
+    아래 src="images/파일명" 경로를 업로드된 URL로 바꿔 주세요.
+  · '받을 수 있는 가전 확인하기' 버튼(data-va-open-form)을 누르면 상담 신청 모달이 열립니다.
+  · 구글 스프레드시트 연동: google-apps-script.gs 안내대로 웹 앱을 배포한 뒤,
+    아래 <script> 맨 위의 SHEET_ENDPOINT 에 웹 앱 URL을 붙여넣으세요.
+================================================================= -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2.0.5/fonts/static/woff2/SUIT.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap">
+<style>
+@font-face{font-family:'InkLipquid';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');font-display:swap}
+@font-face{font-family:'SeoulNamsanM';src:url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');font-display:swap}
+@font-face{font-family:'Freesentation-9Black';src:url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');font-display:swap}
+
+/* ---------- base (모든 스타일은 .va 안으로 한정 — 아임웹 테마와 충돌 방지) ---------- */
+.va{--navy:#1d2087;--navy-2:#1d2088;--ink:#101149;--suit:'SUIT','Pretendard',-apple-system,sans-serif;--pre:'Pretendard','SUIT',-apple-system,sans-serif;
+  font-family:var(--suit);color:#000;background:#fafafa;overflow-x:hidden;overflow-x:clip;width:100%;line-height:1.5;-webkit-font-smoothing:antialiased;word-break:keep-all}
+.va *,.va *::before,.va *::after{box-sizing:border-box;margin:0;padding:0}
+.va img{display:block;max-width:none;border:0}
+.va a{text-decoration:none;color:inherit}
+:where(.va) button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
+.va section{position:relative}
+.va-c{position:absolute;left:50%}              /* 화면 중앙 기준 절대배치 */
+.va-crop{position:absolute;overflow:hidden}      /* Figma 이미지 크롭 박스 */
+.va-crop>img{position:absolute}
+.va-fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.va-tail{position:absolute;width:29px;height:24px;transform:scaleY(-1)}
+.va-tail img{position:absolute;left:13.01%;right:13.01%;top:6.23%;bottom:25%;width:73.98%;height:68.77%}
+.va-only-m{display:none}
+
+/* 버튼 */
+.va-btn{display:flex;align-items:center;justify-content:center;width:439.77px;max-width:100%;padding:19.94px 20px;border-radius:7.98px;font-family:var(--pre);font-weight:800;font-size:20px;line-height:1.2;text-align:center;transition:transform .2s,box-shadow .2s}
+.va-btn:hover{transform:translateY(-2px)}
+.va .va-btn--white{background:#fff;color:#1b1983;filter:drop-shadow(0 0 12px rgba(253,205,123,.7))}
+.va .va-btn--grad{color:#fff;background:linear-gradient(82.1deg,#1d2088 0%,#4e52d9 57.69%,#9294cf 66.33%,#1d2088 99.96%);filter:drop-shadow(0 4px 2px rgba(255,255,255,.25))}
+
+/* 스크롤 등장 효과 (JS 동작 시에만) */
+.va.js .va-rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.va.js .va-rv.in{opacity:1;transform:none}
+
+/* ================= 1. HERO ================= */
+.va-hero{height:1291px;background:#131691;color:#fff;overflow:hidden;text-align:center}
+.va-hero__bg{position:absolute;inset:0;opacity:.11;overflow:hidden}
+.va-hero__bg img{position:absolute;width:109.33%;height:108.45%;left:-9.32%;top:-8.64%;object-fit:cover}
+.va-hero__head{position:relative;width:604px;max-width:calc(100% - 32px);margin:0 auto;padding-top:86px}
+.va-hero__eyebrow{position:relative;font-size:40px;line-height:1.5}
+.va-hero__ul{position:absolute;left:50%;top:51.4px;width:366.82px;height:15.4px;margin-left:-185px}
+.va-hero__ul img{width:100%;height:100%}
+.va-hero__eyetxt{display:inline-block}
+.va-hero__pen{position:absolute;top:50%;left:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;opacity:0;pointer-events:none;
+  background:radial-gradient(circle,#fff 0 28%,rgba(255,255,255,.55) 42%,rgba(253,205,123,0) 70%)}
+/* 히어로 등장 (페이지 로드 시): 문구 → 밑줄이 펜으로 그려지듯 → 제목 두 줄 → 설명 → 가전 카드(가운데부터 바깥으로) → 버튼 → 안내문 */
+.va.js .va-hero__eyetxt,.va.js .va-hero .va-ln,.va.js .va-pcard,.va.js .va-hero__btn,.va.js .va-hero__note{opacity:0}
+.va.js .va-hero__ul img{-webkit-mask-image:linear-gradient(90deg,#000 40%,transparent 60%);mask-image:linear-gradient(90deg,#000 40%,transparent 60%);-webkit-mask-size:250% 100%;mask-size:250% 100%;-webkit-mask-position:100% 0;mask-position:100% 0;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.va-hero.is-in .va-hero__eyetxt{animation:va-word .8s cubic-bezier(.22,1,.36,1) .1s both}
+.va-hero.is-in .va-hero__ul img{animation:va-ul-draw 1.1s cubic-bezier(.65,0,.35,1) .55s both}
+.va-hero.is-in .va-hero__pen{animation:va-pen 1.1s cubic-bezier(.65,0,.35,1) .55s both}
+.va-hero.is-in .va-ln{animation:va-word .9s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+.va-hero.is-in .va-pcard{animation:va-card-in 1s cubic-bezier(.22,1,.36,1) var(--cd,1.6s) both}
+.va-hero.is-in .va-hero__btn{animation:va-btn-in .9s cubic-bezier(.22,1,.36,1) 2.3s both}
+.va-hero.is-in .va-hero__note{animation:va-coins-fade-full 1s ease 2.55s both}
+@keyframes va-ul-draw{from{-webkit-mask-position:100% 0;mask-position:100% 0}to{-webkit-mask-position:0% 0;mask-position:0% 0}}
+@keyframes va-pen{0%{left:-25%;opacity:0}20%{opacity:1}80%{opacity:1}100%{left:125%;opacity:0}}
+@keyframes va-card-in{from{opacity:0;translate:0 60px}to{opacity:1;translate:0 0}}
+@keyframes va-coins-fade-full{from{opacity:0}to{opacity:1}}
+.va-hero__title{margin-top:42px;font-weight:900;font-size:72px;line-height:1.18;letter-spacing:-3.6px}
+.va-hero__desc{margin-top:8px;font-weight:500;font-size:20px;color:rgba(255,255,255,.8)}
+.va-hero__carousel{position:relative;height:541.68px;margin-top:40px}
+.va-hero__btn{margin:19.3px auto 0}
+.va-hero__note{margin-top:29px;font-size:14px;line-height:20px;letter-spacing:-.7px;color:rgba(255,255,255,.8)}
+
+.va-pcard{position:absolute;left:50%;top:50%;width:337px;padding:20px 20px 17px;background:#fff;border-radius:10px;text-align:left;color:#111;
+  filter:drop-shadow(0 7px 4.4px rgba(0,0,0,.25));transform:translate(-50%,-50%);transition:transform .7s cubic-bezier(.4,.1,.2,1);cursor:pointer;will-change:transform}
+.va-pcard.is-jump{transition:none}
+.va-pcard__img{position:relative;height:228px;overflow:hidden}
+.va-pcard__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.va-pcard__img img.cover{object-fit:cover}
+.va-pcard__body{margin-top:8px;font-family:var(--pre)}
+.va-pcard__brand{font-weight:500;font-size:16px;color:#888;line-height:1.5}
+.va-pcard__name{font-size:22px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.va-pcard__was{font-size:20px;line-height:1.5;color:#888;text-decoration:line-through}
+.va-pcard__now{margin-top:4px;font-weight:600;font-size:26px;line-height:1.2;color:#222}
+.va-pcard__now sup{font-size:16px;vertical-align:top;line-height:1}
+.va-pcard__note{margin-top:5px;font-weight:300;font-size:12px;line-height:1.5;color:#999}
+
+/* ================= 2. CHOICE ================= */
+.va-choice{padding:251px 16px 144px;text-align:center}
+.va-script{position:absolute;font-family:'Square Peg',cursive;font-size:70px;line-height:1.5;color:rgba(0,0,0,.1);white-space:nowrap;text-transform:capitalize;pointer-events:none}
+.va-choice__head{position:relative}
+.va-sub40{font-size:40px;line-height:1.5}
+.va-h54{font-weight:900;font-size:54px;line-height:1.3}
+.va-choice__list{width:685px;max-width:100%;margin:80px auto 0;filter:drop-shadow(0 10px 10px rgba(0,0,0,.15))}
+.va-ccard{position:relative;height:161px;padding:16px 20px 20px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:10px;text-align:left}
+.va-ccard+.va-ccard{margin-top:16px}
+.va-ccard__label{font-weight:800;font-size:12px;line-height:1.5;color:#2d2d8d;text-transform:uppercase}
+.va-ccard__title{margin-top:16px;font-weight:700;font-size:40px;line-height:1.3;white-space:nowrap}
+.va-ccard__sub{font-weight:500;font-size:20px;line-height:1.5;color:#7e7e7e;white-space:nowrap}
+.va-ccard__sub b{font-weight:700}
+.va-ccard--right{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;text-align:right}
+.va-ccard--right .va-ccard__label{padding:0 10px}
+.va-ccard--right .va-ccard__title{margin-top:16px}
+.va-ccard__txt{position:relative;z-index:1}
+.va-choice__plus{width:29.85px;height:29.79px;margin:24px auto}
+/* 가전+라이프서비스 제목: 줄마다 차례로 → 끝나면 손글씨 영문이 왼쪽부터 써지듯 등장 (좌우 이동은 스크롤 연동, JS) */
+.va.js .va-choice__head.va-rv{opacity:1;transform:none}
+.va.js .va-choice__head .va-ln{opacity:0}
+.va.js .va-choice__head.in .va-ln{animation:va-word .45s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+.va.js .va-choice__head .va-script{opacity:0}
+.va.js .va-choice__head.in .va-script{animation:va-script .75s cubic-bezier(.65,0,.35,1) var(--d,0s) both}
+@keyframes va-script{from{opacity:0;clip-path:inset(-20px 100% -20px -20px)}30%{opacity:1}to{opacity:1;clip-path:inset(-20px -20px -20px -20px)}}
+/* 카드: 카드 → 그 위 이미지들 → 다음 카드 → 이미지 → + → 복지몰 배너 순서 */
+.va.js .va-choice__list.va-rv{opacity:1;transform:none}
+.va.js .va-choice__list .va-ccard,.va.js .va-choice__list .va-crop,.va.js .va-choice__list .va-choice__plus,.va.js .va-choice__list .va-mallbar{opacity:0}
+.va.js .va-choice__list.in .va-ccard{animation:va-up .425s cubic-bezier(.22,1,.36,1) 0s both}
+.va.js .va-choice__list.in .va-choice__tv{animation:va-pop .45s cubic-bezier(.34,1.45,.64,1) .275s both}
+.va.js .va-choice__list.in .va-choice__pur{animation:va-pop .45s cubic-bezier(.34,1.45,.64,1) .36s both}
+.va.js .va-choice__list.in .va-choice__rob{animation:va-pop .45s cubic-bezier(.34,1.45,.64,1) .445s both}
+.va.js .va-choice__list.in .va-ccard--right{animation-delay:.85s}
+.va.js .va-choice__list.in .va-ccard--right .va-crop{animation:va-drive .55s cubic-bezier(.22,1,.36,1) 1.125s both}
+.va.js .va-choice__list.in .va-choice__plus{animation:va-pop .35s cubic-bezier(.34,1.45,.64,1) 1.55s both}
+.va.js .va-choice__list.in .va-mallbar{animation:va-up .45s cubic-bezier(.22,1,.36,1) 1.65s both}
+@keyframes va-up{from{opacity:0;translate:0 40px}to{opacity:1;translate:0 0}}
+@keyframes va-pop{from{opacity:0;translate:0 28px;scale:.88}to{opacity:1;translate:0 0;scale:1}}
+@keyframes va-drive{from{opacity:0;translate:-90px 0}to{opacity:1;translate:0 0}}
+.va-mallbar{position:relative;overflow:hidden;padding:20px 0;background:#161681;border-radius:10px;color:#fff}
+.va-mallbar__bg{position:absolute;left:-207px;top:-998.79px;width:1404.23px;height:1695.58px;display:flex;align-items:center;justify-content:center}
+.va-mallbar__bg div{position:relative;width:714.68px;height:1547.52px;transform:rotate(30.68deg);flex:none}
+.va-mallbar__bg img{opacity:.1}
+.va-mallbar__pill{position:relative;display:inline-block;padding:4px 20px;background:#fff;border-radius:80px;color:#1a1a84;font-weight:700;font-size:20px;line-height:1.5}
+.va-mallbar__title{position:relative;margin-top:10px;font-weight:700;font-size:40px;line-height:1.5}
+
+/* ================= 3. PRODUCT ================= */
+.va-prod{padding:144px 16px 151px;text-align:center}
+.va-prod__head{width:630px;max-width:100%;margin:0 auto}
+.va-prod__t1{font-size:54px;line-height:1.3}
+.va-prod__t2{font-weight:900;font-size:72px;line-height:1.3}
+.va-hl{position:relative;display:inline-block;z-index:0}
+.va-hl::before{content:"";position:absolute;z-index:-1;left:-8px;right:-8px;bottom:-1px;height:44px;background:#c8caf3}
+.va-desc{font-size:20px;line-height:1.5;color:#585858}
+.va-prod__desc{margin-top:24px}
+.va-checks{width:685px;max-width:100%;margin:80px auto 0;text-align:left}
+.va-check{display:flex;align-items:center;gap:20px;padding:20px 40px;background:#f0f0f0;border-radius:10px;font-weight:500;font-size:26px;line-height:1.5}
+.va-check+.va-check{margin-top:8px}
+.va-check__ico{width:32px;height:32px;flex:none;overflow:visible}
+.va-check__ico circle,.va-check__ico path{stroke-dasharray:1;stroke-dashoffset:0}
+
+/* 올인원598 제목: 줄마다 차례로 떠오른 뒤 하이라이트가 왼쪽→오른쪽으로 칠해짐 */
+.va.js .va-prod__head.va-rv{opacity:1;transform:none}
+.va.js .va-prod__head>*{opacity:0}
+.va.js .va-prod__head.in>*{animation:va-word .95s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-prod__head.in .va-prod__t2{animation-delay:.15s}
+.va.js .va-prod__head.in .va-prod__desc{animation-delay:.45s}
+.va.js .va-prod__head .va-hl::before{transform:scaleX(0);transform-origin:0 50%}
+.va.js .va-prod__head.in .va-hl::before{animation:va-hl 1s cubic-bezier(.65,0,.35,1) .8s both}
+/* 체크 항목: 하나씩 왼쪽에서 들어오고, 아이콘은 원 → 체크 순서로 그려짐 */
+.va.js .va-check.va-rv{opacity:0;transform:translateX(-28px);transition:opacity .7s ease var(--d,0s),transform 1s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+.va.js .va-check.va-rv.in{opacity:1;transform:none}
+.va.js .va-check__ico circle,.va.js .va-check__ico path{stroke-dashoffset:1}
+.va.js .va-check.in .va-check__ico circle{stroke-dashoffset:0;transition:stroke-dashoffset .75s cubic-bezier(.65,0,.35,1) calc(var(--d,0s) + .25s)}
+.va.js .va-check.in .va-check__ico path{stroke-dashoffset:0;transition:stroke-dashoffset .4s cubic-bezier(.33,1,.68,1) calc(var(--d,0s) + .8s)}
+.va-check b{font-weight:800}
+.va-check small{display:block;font-size:inherit;color:#555}
+.va-chevrons{position:relative;width:50px;height:26.89px;margin:60px auto 0}
+.va-chevrons img{position:absolute;left:-2px;top:-2px;width:54px;height:30.89px}
+
+.va-plans{position:relative;display:flex;gap:16px;width:785px;max-width:100%;margin:64px auto 0;filter:drop-shadow(0 10px 15px rgba(0,0,0,.25))}
+.va-plans--sm{margin-top:32px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.15))}
+.va-plan{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;padding:40px 30px 37px;background:#fff;border-radius:10px;overflow:hidden;transition:box-shadow .25s ease}
+.va-plan:hover{box-shadow:inset 0 0 0 2px var(--navy)}   /* 테두리 대신 안쪽 그림자: 크기가 변하지 않아 옆 카드가 밀리지 않음 */
+.va-plan__name{font-weight:800;font-size:36px;line-height:1.5;text-shadow:0 0 16.3px #fff;white-space:nowrap}
+.va-plan__type{margin-top:10px;padding:6px 30px;background:#dddef8;border-radius:100px;color:#2b2fca;font-weight:800;font-size:24px;line-height:1.5}
+.va-plan__line{width:100%;max-width:191px;height:1px;margin-top:20px;background:rgba(0,0,0,.3)}
+.va-plan__month{margin-top:20px;padding:20px 0}
+.va-plan__month b{display:block;font-weight:700;font-size:26px;line-height:1.5}
+.va-plan__month span{display:block;font-size:20px;line-height:1.5}
+.va-plan__month small{display:block;font-weight:500;font-size:16px;line-height:1.7;color:#999}
+.va-plan__gap{height:48px;margin-top:40px}          /* 파란 '만기환급액' 바가 덮는 자리 */
+.va-plan__total{margin-top:40px;font-weight:900;font-size:30px;line-height:1.5;color:#222;white-space:nowrap}
+.va-plans__bar{position:absolute;left:50%;bottom:110px;width:850px;max-width:calc(100% + 32px);height:72px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;
+  background:#353ad4;border:1px solid rgba(0,0,0,.1);border-radius:10px;color:#fff;font-weight:500;font-size:26px;line-height:1.5;filter:drop-shadow(0 4px 2px rgba(0,0,0,.1));white-space:nowrap}
+.va-plans__bar b{font-weight:800}
+
+/* ================= 4. CARD DISCOUNT ================= */
+.va-card{height:716px;overflow:hidden;text-align:center}
+.va-card__bg{position:absolute;left:0;right:0;top:117px;height:1022px;background:linear-gradient(180deg,#fafafa 0%,rgba(250,250,250,0) 14.42%),linear-gradient(136.79deg,#eaf0fc 0%,#9597ea 68.09%)}
+.va-card__deco{position:absolute;object-fit:cover;pointer-events:none}
+.va-card__head{position:relative;padding-top:47px}
+.va-card__head .va-h54{text-shadow:0 0 20px #fff;white-space:nowrap}
+.va-card__head .va-sub40{margin-bottom:8px}
+.va-card__row{position:absolute;left:50%;top:276px;width:1155px;transform:translateX(-50%);display:flex;justify-content:space-between}
+.va-cc{display:flex;gap:20px;align-items:flex-start}
+/* 카드 할인 제목: 윗줄이 떠오른 뒤 아랫줄은 글자 단위로 차례로 떠오름 */
+.va-wd{display:inline-block;white-space:nowrap}
+.va-ch{display:inline-block}
+.va.js .va-card__head.va-rv{opacity:1;transform:none}
+.va.js .va-card__head .va-sub40,.va.js .va-card__head .va-ch{opacity:0}
+.va.js .va-card__head.in .va-sub40{animation:va-word .9s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-card__head.in .va-ch{animation:va-char .85s cubic-bezier(.22,1,.36,1) calc(.3s + var(--i) * 38ms) both}
+@keyframes va-char{from{opacity:0;transform:translateY(.55em) scale(.92);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+/* 카드: 아래에서 위로 떠오름 (두 번째 카드는 살짝 늦게) */
+.va.js .va-cc.va-rv{transform:translateY(90px);transition:opacity .9s ease var(--d,0s),transform 1.2s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+.va.js .va-cc.va-rv.in{transform:none}
+.va-cc__img{position:relative;width:242px;height:390px;border-radius:16px;overflow:hidden;flex:none; transition: 0.4s;}
+.va-cc__img:hover{
+    transform: rotate(-4deg);
+    box-shadow: 0px 0px 10px #1d20869c;
+}
+.va-cc__info{width:282px;display:flex;flex-direction:column;gap:24px;align-items:center}
+.va-cc__name{font-weight:800;font-size:26px;line-height:1.2;white-space:nowrap}
+.va-cc__sub{margin-top:4px;font-weight:500;font-size:20px;line-height:1.2}
+.va-cc__sub b{font-weight:700}
+.va-cc__table{width:100%;background:rgba(251,251,251,.2);border-radius:10px;overflow:hidden;border-collapse:collapse}
+.va-cc__table td,.va-cc__table th{width:50%;padding:10px;border-bottom:1px solid rgba(153,153,153,.3);text-align:center;line-height:1.2;color:#222}
+.va-cc__table tr>*:first-child{border-right:1px solid rgba(153,153,153,.3)}
+.va-cc__table th{background:rgba(255,255,255,.5);font-weight:500;font-size:18px}
+.va-cc__table td{font-weight:800;font-size:18px;height:43px}
+.va-cc__table td:first-child{font-weight:700;font-size:16px;color:#444}
+.va-cc__apply{font-size:20px;line-height:1.2;color:#222}
+.va-cc__apply span{display:block;margin-top:2px}
+.va-card__note{position:absolute;left:max(16px,calc(50% - 944px));top:582px;font-size:14px;line-height:1.5;color:#333}
+
+/* ================= 5. FAMILY ================= */
+.va-family{height:100vh;overflow:hidden;background:#fff; margin-top: -100px;}
+.va-family__photo{position:absolute;bottom:0;width:2159px;height:1152px;margin-left:-1087px;object-fit:cover;
+  -webkit-mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%);mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%)}
+.va-family__people{position:absolute;bottom:0;width:2183.36px;height:1165px;margin-left:-1096px;object-fit:cover;pointer-events:none}
+/* 고객 공감: 섹션을 화면에 고정(핀)하고, 스크롤 위치에 맞춰 말풍선이 하나씩 나타남(스크럽) */
+/* 섹션 높이가 화면 높이(100vh)를 따르므로, 사진·인물·말풍선을 디자인 크기(1920×1149) 무대에 묶어 높이에 맞춰 함께 축소 → 배치가 항상 디자인과 같음 */
+.va-family__stage{position:absolute;left:50%;bottom:0;width:1920px;height:1149px;margin-left:-960px;transform:scale(var(--va-fk,1));transform-origin:50% 100%}
+.va-family.is-fit .va-family__photo{
+  -webkit-mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%),linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%),linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);
+  mask-composite:intersect}
+.va-family.is-fit .va-family__people{-webkit-mask-image:linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);mask-image:linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent)}
+.va-family-pin{position:relative}
+.va-family-pin.is-on{height:calc(1149px + 1500px)}
+.va-family-pin.is-on .va-family{position:sticky;top:var(--va-pin-top,0px)}
+.va-family.is-scrub .va-quote{transition:none!important;will-change:opacity,transform,filter}
+.va-family.is-scrub .va-family__people{will-change:opacity,filter}
+.va-quote{position:absolute;display:flex;align-items:center;gap:60px;font-family:'SeoulNamsanM',var(--suit);font-size:30px;line-height:1.3;color:#333;text-align:center;white-space:nowrap}
+.va-quote__blob{position:absolute;width:209px;height:104px;background:rgba(255,255,255,.7);border-radius:999px;filter:blur(40.45px)}
+.va-quote img{width:31.07px;height:28.08px;flex:none}
+.va-quote img+p+img{width:31.33px;height:28.34px}
+
+/* ================= 6. SWITCH SERVICE ================= */
+.va-switch{height:2236px;overflow:hidden;background:#f2f3fc;text-align:center}
+.va-switch__bg{position:absolute;width:max(2252.42px,117.314vw);height:max(1407.76px,73.321vw);margin-left:min(-1220.5px,-63.568vw);object-fit:cover;opacity:.5;mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(180deg,transparent,rgba(0,0,0,1));mask-image:linear-gradient(180deg,transparent,rgba(0,0,0,1))}
+.va-switch__bg--top{transform:rotate(180deg)}
+.va-switch__curve{position:absolute;top:614.2px;width:max(2248.94px,117.132vw);height:548.22px;margin-left:min(-1087.5px,-56.641vw);pointer-events:none;overflow:visible}
+/* 곡선 모션: 스크롤로 보이면 왼쪽→오른쪽으로 그려지고, 빛이 경로를 따라 이동 */
+.va-curve__draw{stroke-dasharray:1;stroke-dashoffset:0}
+.va.js .va-curve__draw{stroke-dashoffset:1}
+.va.js .va-switch__curve.va-rv{transform:none;transition:opacity 1.8s ease}
+.va-switch__head{position:relative;padding-top:158px}
+.va-switch__icon{width:120px;height:120px;margin:0 auto 16px;object-fit:contain;object-position:bottom}
+.va-switch__head h2{font-weight:500;font-size:54px;line-height:1.3;white-space:nowrap}
+.va-switch__head h2 b{font-weight:900}
+.va-switch__line{width:450px;max-width:80%;height:1px;margin:24px auto;background:rgba(0,0,0,.2)}
+.va-svc{position:absolute;left:0;right:0;top:777px;width:max-content;margin:0 auto;display:flex;gap:20px}
+.va-svc__card{width:372px;height:214px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;background:#fff;border-radius:10px;text-align:left;box-shadow:0 10px 28.8px rgba(0,0,0,.15)}
+.va-svc__card:nth-child(2){width:371px}
+.va-svc__top{display:flex;justify-content:space-between;align-items:flex-start}
+.va-svc__top h3{font-weight:800;font-size:36px;line-height:1.5}
+.va-svc__icon{position:relative;overflow:hidden;flex:none}
+.va-svc__icon img{position:absolute}
+.va-svc__card p{font-size:18px;line-height:1.5;color:#555;white-space:nowrap}
+.va-switch__coins{position:absolute;top:1351px;width:145px;height:141px;margin-left:-64.5px}
+.va-refund{position:absolute;left:0;right:0;top:1505px;width:785px;margin:0 auto}
+.va-refund__t1{font-weight:500;font-size:30px;line-height:1.5}
+.va-refund__t2{font-weight:800;font-size:40px;line-height:1.5}
+/* 서비스 전환 영역: 제목 차례대로 → 카드 3장 차라락 → (카드가 다 올라오면) 곡선 모션 패스 → 환급 블록 차례대로 */
+.va.js .va-switch__head.va-rv,.va.js .va-svc.va-rv,.va.js .va-refund.va-rv{opacity:1;transform:none}
+.va.js .va-switch__icon,.va.js .va-switch__head .va-ln,.va.js .va-svc__card,.va.js .va-switch__coins,.va.js .va-refund>*{opacity:0}
+.va.js .va-switch__line{transform:scaleX(0)}
+.va.js .va-switch__head.in .va-switch__icon{animation:va-icon-spin 1s cubic-bezier(.34,1.4,.64,1) both}
+.va.js .va-switch__head.in .va-ln{animation:va-word .9s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+.va.js .va-switch__head.in .va-switch__line{animation:va-line-x .8s cubic-bezier(.65,0,.35,1) .8s both}
+.va.js .va-svc.in .va-svc__card{animation:va-svc-in .7s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-svc.in .va-svc__card:nth-child(2){animation-delay:.12s}
+.va.js .va-svc.in .va-svc__card:nth-child(3){animation-delay:.24s}
+.va.js .va-switch.is-in .va-switch__coins{animation:va-coins-drop .9s cubic-bezier(.34,1.45,.64,1) both}
+.va.js .va-refund.in>.va-refund__t1{animation:va-word .9s cubic-bezier(.22,1,.36,1) .3s both}
+.va.js .va-refund.in>.va-refund__t2{animation:va-word .9s cubic-bezier(.22,1,.36,1) .45s both}
+.va.js .va-refund.in>.va-plans{animation:va-up .9s cubic-bezier(.22,1,.36,1) .65s both}
+.va.js .va-refund.in>.va-refund__note{animation:va-word .9s cubic-bezier(.22,1,.36,1) .95s both}
+@keyframes va-icon-spin{from{opacity:0;scale:.5;rotate:-180deg}to{opacity:1;scale:1;rotate:0deg}}
+@keyframes va-svc-in{from{opacity:0;translate:0 60px;scale:.96}to{opacity:1;translate:0 0;scale:1}}
+@keyframes va-coins-drop{from{opacity:0;translate:0 -50px;scale:.85}to{opacity:1;translate:0 0;scale:1}}
+.va-refund__note{margin-top:24px;font-size:14px;line-height:1.5;color:#878787}
+
+/* ================= 7. BORAM MALL ================= */
+.va-mall-wrap{position:relative;}
+.va-mall{height:1054px;background:linear-gradient(180deg,#1d2088,#00025e);text-align:center;color:#fff}
+.va-mall__bgs{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.va-mall__deco{position:absolute;display:flex;align-items:center;justify-content:center}
+.va-mall__deco div{position:relative;flex:none;transform:rotate(26.53deg);opacity:.05}
+.va-mall__head{position:relative;width:512px;max-width:calc(100% - 32px);margin:0 auto;padding-top:80px}
+.va-mall__eyebrow{font-weight:600;font-size:36px;line-height:1.5;letter-spacing:3.96px;text-shadow:0 0 29px rgba(255,255,255,.75)}
+.va-mall__title{margin-top:16px;font-weight:900;font-size:54px;line-height:1.2;letter-spacing:-1.62px}
+.va-mall__desc{margin-top:24px;font-size:20px;line-height:1.5;color:#dadada}
+/* 보람몰: 줄마다 차례로 등장 → 휴대폰이 떠오르고 말풍선 → 카드 캐러셀이 오른쪽에서 들어옴 */
+.va-ln{display:block}
+.va.js .va-mall__head.va-rv{opacity:1;transform:none}
+.va.js .va-mall__head .va-ln{opacity:0}
+.va.js .va-mall__head.in .va-ln{animation:va-word .9s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+.va.js .va-mall__head~.va-mall__stage .va-phone,.va.js .va-mall__head~.va-mall__stage .va-bubble,.va.js .va-mall__head~.va-mall__stage .va-marquee{opacity:0}
+.va.js .va-mall__head.in~.va-mall__stage .va-phone{animation:va-phone-in 1.2s cubic-bezier(.22,1,.36,1) .75s both}
+.va.js .va-mall__head.in~.va-mall__stage .va-bubble{animation:va-bubble-in .7s cubic-bezier(.34,1.56,.64,1) 1.55s both,slide-top 1s ease-in-out 2.25s infinite alternate-reverse both}
+.va.js .va-mall__head.in~.va-mall__stage .va-marquee{animation:va-slide-in 1.4s cubic-bezier(.22,1,.36,1) 1.35s both}
+.va.js .va-mall__head.in~.va-mall__stage .va-marquee--2{animation-delay:1.5s}
+@keyframes va-phone-in{from{opacity:0;transform:translateY(110px)}to{opacity:1;transform:none}}
+@keyframes va-bubble-in{from{opacity:0;translate:0 10px;scale:.85}to{opacity:1;translate:0 0;scale:1}}
+@keyframes va-slide-in{from{opacity:0;transform:translateX(180px)}to{opacity:1;transform:none}}
+.va-marquee{position:absolute;left:0;right:0;top:597px;height:354px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.4) 0%,#000 10.6%,#000 88%,rgba(0,0,0,.4) 100%);mask-image:linear-gradient(90deg,rgba(0,0,0,.4) 0%,#000 10.6%,#000 88%,rgba(0,0,0,.4) 100%)}
+.va-marquee__track{display:flex;gap:20px;width:max-content;height:100%;padding-left:20px;animation:va-marquee 48s linear infinite;filter:drop-shadow(0 0 2px rgba(0,0,0,.45))}
+.va-marquee:hover .va-marquee__track{animation-play-state:paused}
+.va-marquee--2{display:none}
+.va-marquee--2 .va-marquee__track{animation-direction:reverse;animation-delay:-20s}
+@keyframes va-marquee{to{transform:translateX(-50%)}}
+.va-mcard{width:255px;height:100%;display:flex;flex-direction:column;gap:30px;padding-bottom:30px;background:#fff;border-radius:10px;overflow:hidden;color:#000;flex:none}
+.va-mcard__img{position:relative;flex:1 1 0;min-height:0;overflow:hidden}
+.va-mcard__img img{position:absolute}
+.va-mcard h4{font-weight:700;font-size:24px;line-height:1.3}
+.va-mcard p{margin-top:6px;font-weight:500;font-size:14px;line-height:1.4;color:#555}
+.va-mcard p b{font-weight:700}
+.va-phone{position:absolute;left:50%;top:351px;width:350.67px;margin-left:-579px;display:flex;flex-direction:column;align-items:center;gap:32px;z-index:2}
+.va-bubble{position:relative;padding:8px 20px;background:#fff;border-radius:10px;color:#000;font-weight:500;font-size:20px;line-height:1.5;white-space:nowrap;filter:drop-shadow(0 0 17px rgba(255,255,255,.25)); 	-webkit-animation: slide-top 1s ease-in-out infinite alternate-reverse both;
+	        animation: slide-top 1s ease-in-out infinite alternate-reverse both;}
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2026-10-12 14:49:53
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+
+.va-bubble .va-tail{left:50%;top:35px;margin-left:-14.5px}
+.va-phone__body{position:relative;width:100%;height:708.55px;filter:drop-shadow(0 6.8px 5.9px rgba(0,0,0,.45))}
+.va-phone__screen{position:absolute;left:50%;top:50%;width:313.79px;height:679.45px;transform:translate(-50%,-50%);margin-left:-.08px;margin-top:-.36px;border-radius:32px;overflow:hidden}
+.va-phone__screen img{position:absolute;left:50%;top:50%;width:312.95px;height:677.64px;transform:translate(-50%,-50%);object-fit:cover}
+.va-phone__frame{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+
+/* ================= 8. TRUST ================= */
+.va-trust{z-index: 10;overflow:hidden;margin-top: 0;padding:300px 16px 187px;text-align:center;background:linear-gradient(180deg,rgba(2555,255,255,100%) 4%,rgba(146,148,207,.2) 23.56%,rgba(46,49,145,.884) 58.65%,#1d2087 100%)}
+.va-trust__bg{position:absolute;top:min(814px,calc(2116px - 67.825vw));width:max(2006px,104.479vw);height:max(1302.24px,67.825vw);margin-left:min(-1025px,-53.385vw);object-fit:cover;mix-blend-mode:multiply;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 84.6%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 84.6%,transparent 100%)}
+.va-since{position:relative;width:426px;max-width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:54px}
+.va-since p{position:relative;font-size:40px;line-height:1.5;white-space:nowrap}
+.va-since b{font-weight:800}
+.va-since__line{width:1px;height:215px;background:#222}
+.va-since__check{position:relative;width:94px;height:87px;margin-bottom:-24px}
+.va-since__check svg{position:absolute;left:-2.2px;top:-6.06px;width:102.2px;height:96.77px;overflow:visible}
+.va-since__hl{position:absolute;left:50%;bottom:2px;width:478px;height:28px;margin-left:-239px;background:rgba(230,0,18,.3)}
+.va-since__txt{position:relative;display:inline-block}
+.va-since__num{display:inline-block;transform-origin:50% 85%}
+.va-since__num [data-va-count]{display:inline-block;text-align:right;font-variant-numeric:tabular-nums}
+.va-since__check-draw{stroke-dasharray:1;stroke-dashoffset:0}
+
+/* '1991년 부터 쭉!' 시퀀스: 단어 등장 → 선 내려오기 → 체크 긋기 → 문장 → 하이라이트 → 340만 명 카운트·강조 */
+.va.js .va-since.va-rv{opacity:1;transform:none}
+.va.js .va-since .va-w,.va.js .va-since__txt{opacity:0}
+.va.js .va-since__line{transform:scaleY(0);transform-origin:50% 0}
+.va.js .va-since__check-draw{stroke-dashoffset:1}
+.va.js .va-since__hl{transform:scaleX(0);transform-origin:0 50%}
+.va-w{display:inline-block}
+.va.js .va-since.in .va-w{animation:va-word .45s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+.va.js .va-since.in .va-w--pop{animation-name:va-word-pop;animation-duration:.5s;transform-origin:50% 80%}
+.va.js .va-since.in .va-since__line{animation:va-line .55s cubic-bezier(.65,0,.35,1) .375s both}
+.va.js .va-since.in .va-since__check-draw{animation:va-check .4s cubic-bezier(.55,0,.25,1) .9s both}
+.va.js .va-since.in .va-since__txt{animation:va-word .4s cubic-bezier(.22,1,.36,1) 1.175s both}
+.va.js .va-since.in .va-since__hl{animation:va-hl .425s cubic-bezier(.65,0,.35,1) 1.4s both}
+.va-since__num.is-pop{animation:va-num-pop .35s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes va-word{from{opacity:0;transform:translateY(.45em);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes va-word-pop{0%{opacity:0;transform:translateY(.45em) scale(.6);filter:blur(6px)}55%{opacity:1;transform:translateY(0) scale(1.14);filter:blur(0)}100%{opacity:1;transform:none;filter:blur(0)}}
+@keyframes va-line{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes va-check{0%{stroke-dashoffset:1}38%{stroke-dashoffset:.66}100%{stroke-dashoffset:0}}
+@keyframes va-hl{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes va-num-pop{0%{transform:scale(1);color:inherit}40%{transform:scale(1.1);}100%{transform:scale(1);color:inherit}}
+.va-with{position:relative;width:656px;max-width:100%;margin:257px auto 0}
+.va-with__logo{display:flex;align-items:center;justify-content:center;gap:10px}
+.va-with__logo img{width:547px;height:66px;object-fit:cover}
+.va-with h2{font-weight:900;font-size:54px;line-height:1.3;white-space:nowrap}
+.va-with h2.va-with__2{padding-left:20px}
+.va-with__desc{margin-top:32px;font-size:20px;line-height:1.5;color:#dadada}
+.va-facts{position:relative;width:1031px;max-width:100%;margin:65px auto 0;color:#fff}
+.va-facts__main{display:inline-flex;flex-direction:column;gap:20px;align-items:center;padding:32px 70px;background:rgba(255,255,255,.1);border-radius:10px}
+.va-facts__main>p:first-child{font-weight:700;font-size:20px;line-height:1.5;text-shadow:0 0 9px #1d2088}
+.va-facts__big{font-weight:900;font-size:70px;line-height:1;letter-spacing:-1.4px;white-space:nowrap; text-shadow: 0px 0px 10px rgba(255,255,255,.5);}
+.va-facts small{font-weight:300;font-size:14px;line-height:1.5;color:#b2b2b2}
+.va-stats{position:relative;display:flex;justify-content:center;gap:53px;margin-top:42px;padding:40px}
+.va-stats::before,.va-stats::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.35),rgba(255,255,255,0))}
+.va-stats::before{top:0}.va-stats::after{bottom:0}
+.va-stat{width:198px;display:flex;flex-direction:column;gap:20px;align-items:center}
+.va-stat p{font-weight:700;font-size:20px;line-height:1.5}
+.va-stat strong{font-weight:900;font-size:40px;line-height:1;letter-spacing:-.8px;text-shadow:0 0 11.2px #0c0d4d;white-space:nowrap}
+.va-awards{display:flex;justify-content:center;gap:80px;margin-top:80px}
+.va-award{display:flex;align-items:flex-start;justify-content:center}
+.va-award__laurel{position:relative;width:105.77px;height:200.94px;display:flex;align-items:center;justify-content:center;flex:none}
+.va-award__laurel:first-child{margin-right:-4px}
+.va-award__laurel img{width:69px;height:191px;flex:none;transform:rotate(11.53deg)}
+.va-award__laurel:first-child img{transform:rotate(168.47deg) scaleY(-1)}
+.va-award__txt{position:relative;display:flex;flex-direction:column;gap:7px;align-items:center;padding-top:16px;margin-right:-4px}
+.va-award__txt>p{font-weight:700;font-size:20px;line-height:1.3;white-space:nowrap}
+.va-award__txt>.va-award__rank{font-family:'Freesentation-9Black',var(--suit);font-weight:900;font-size:70px;line-height:1.1;white-space:nowrap;color:transparent;
+  background:linear-gradient(225.75deg,#d5b067 8.9%,#faf5e0 43.29%,#ecd989 55.85%,#c79a5b 70.4%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 4px rgba(0,0,0,.25))}
+.va-award__spark{position:absolute;top:92px}
+/* 신뢰 영역 후반: 로고 → 함께합니다 → 선수금 카운트 → 지표 4개 → 수상 */
+[data-va-num]{display:inline-block;font-variant-numeric:tabular-nums}
+.va.js .va-with.va-rv,.va.js .va-stats.va-rv,.va.js .va-awards.va-rv{opacity:1;transform:none}
+.va.js .va-with__logo img,.va.js .va-with__logo h2,.va.js .va-with__2,.va.js .va-with__desc,
+.va.js .va-stat,.va.js .va-award__laurel,.va.js .va-award__txt>p,.va.js .va-award__spark{opacity:0}
+.va.js .va-stats::before,.va.js .va-stats::after{transform:scaleX(0)}
+/* 로고는 왼쪽부터 드러나고, '과'가 톡, 이어서 '함께합니다.'와 설명 */
+.va.js .va-with.in .va-with__logo img{animation:va-write .9s cubic-bezier(.65,0,.35,1) both}
+.va.js .va-with.in .va-with__logo h2{animation:va-word-pop .5s cubic-bezier(.22,1,.36,1) .7s both}
+.va.js .va-with.in .va-with__2{animation:va-word .8s cubic-bezier(.22,1,.36,1) .85s both}
+.va.js .va-with.in .va-with__desc{animation:va-word .8s cubic-bezier(.22,1,.36,1) 1.05s both}
+/* 선수금 카드: 기본 떠오름(va-rv) + 숫자 카운트(JS) */
+/* 지표: 위아래 선이 가운데서 펼쳐지고, 항목이 하나씩 떠오르며 숫자 카운트(JS) */
+.va.js .va-stats.in::before,.va.js .va-stats.in::after{animation:va-line-x .9s cubic-bezier(.65,0,.35,1) both}
+.va.js .va-stats.in .va-stat{animation:va-up .8s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-stats.in .va-stat:nth-child(1){animation-delay:.25s}
+.va.js .va-stats.in .va-stat:nth-child(2){animation-delay:.35s}
+.va.js .va-stats.in .va-stat:nth-child(3){animation-delay:.45s}
+.va.js .va-stats.in .va-stat:nth-child(4){animation-delay:.55s}
+/* 수상: 월계수가 아래에서 펼쳐지듯 → 문구 → '1위' 금빛 → 반짝이 */
+.va-award:nth-child(2){--ad:.25s}
+.va-award__laurel:first-child{transform-origin:100% 100%}
+.va-award__laurel:last-child{transform-origin:0 100%}
+.va.js .va-awards.in .va-award__laurel:first-child{animation:va-laurel-l .9s cubic-bezier(.34,1.3,.64,1) var(--ad,0s) both}
+.va.js .va-awards.in .va-award__laurel:last-child{animation:va-laurel-r .9s cubic-bezier(.34,1.3,.64,1) var(--ad,0s) both}
+.va.js .va-awards.in .va-award__txt>p:first-child{animation:va-word .7s cubic-bezier(.22,1,.36,1) calc(var(--ad,0s) + .45s) both}
+.va.js .va-awards.in .va-award__txt>.va-award__rank{animation:va-rank-in .8s cubic-bezier(.34,1.5,.64,1) calc(var(--ad,0s) + .7s) both}
+.va.js .va-awards.in .va-award__spark{animation:va-spark-in .6s cubic-bezier(.34,1.4,.64,1) calc(var(--ad,0s) + 1.15s) both,va-twinkle 3s ease-in-out calc(var(--ad,0s) + 1.75s) infinite}
+@keyframes va-laurel-l{from{opacity:0;rotate:-40deg;scale:.7}to{opacity:1;rotate:0deg;scale:1}}
+@keyframes va-laurel-r{from{opacity:0;rotate:40deg;scale:.7}to{opacity:1;rotate:0deg;scale:1}}
+@keyframes va-rank-in{0%{opacity:0;scale:.5;filter:drop-shadow(0 0 4px rgba(0,0,0,.25)) brightness(1)}55%{opacity:1;scale:1.12;filter:drop-shadow(0 0 16px rgba(250,230,160,.75)) brightness(1.35)}100%{opacity:1;scale:1;filter:drop-shadow(0 0 4px rgba(0,0,0,.25)) brightness(1)}}
+.va-award__spark img{position:absolute;inset:-9.16%;width:118.32%;height:118.32%}
+
+/* ================= 9. FAQ ================= */
+.va-faq{padding:122px 16px 239px;background:linear-gradient(180deg,#1d2086 17.31%,#2c31cd 100%);color:#fff}
+.va-faq h2{font-weight:800;font-size:54px;line-height:1.2;text-align:center}
+.va-faq__list{width:893px;max-width:100%;margin:70px auto 0}
+.va-faq__item+.va-faq__item{margin-top:10px}
+.va-faq__q{position:relative;z-index:2;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 30px;background:#191c76;border:2px solid transparent;border-radius:10px;
+  font-weight:700;font-size:20px;line-height:1.5;text-align:left;transition:border-color .25s}
+.va-faq__q img{width:34px;height:34px;flex:none;transition:transform .3s}
+.va-faq__item.is-open .va-faq__q{border-color:rgba(255,255,255,.6)}
+.va-faq__item.is-open .va-faq__q img{transform:scaleY(-1)}
+.va-faq__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease,margin-top .35s ease}
+.va-faq__item.is-open .va-faq__a{grid-template-rows:1fr;margin-top:-10px}
+.va-faq__a>div{overflow:hidden}
+.va-faq__a-in{display:flex;gap:20px;padding:30px 30px 20px;background:#0f1147;border-radius:0 0 10px 10px}
+.va-faq__a-in>span{font-weight:600;font-size:20px;line-height:1.5;flex:none}
+.va-faq__a-in>p{font-size:18px;line-height:1.5;padding-top:1px}
+
+/* ================= 10. SALES LINKER ================= */
+.va-sales{position:relative;z-index:1;height:1419px;text-align:center;color:var(--navy)}
+.va-sales__bg{position:absolute;left:50%;top:0;width:calc(100% + 8px);min-width:1928px;height:1437.87px;transform:translateX(-50%);pointer-events:none}
+.va-sales__in{position:relative;padding-top:180px}
+.va-sales__bubble{position:relative;display:inline-block;padding:6px 30px;background:#fff;border-radius:16px;font-family:'InkLipquid',var(--suit);font-size:25px;line-height:1.5;letter-spacing:-.75px;color:#222;filter:drop-shadow(0 2px 5px rgba(0,0,0,.25)); -webkit-animation: slide-top 1s ease-in-out infinite alternate-reverse both;
+	        animation: slide-top 1s ease-in-out infinite alternate-reverse both}
+.va-sales__bubble .va-tail{left:50%;top:37px;margin-left:-14.5px }
+.va-sales__hand{position:relative;width:306px;height:289px;margin:21px auto 0;left:17px}
+.va-sales__hand img{position:absolute;top:0;left:-15.03%;width:130.06%;height:100%}
+.va-sales__title{position:relative;margin-top:3px;letter-spacing:-2.7px;left:27.5px;white-space:nowrap}
+.va-sales__title p:first-child{font-weight:500;font-size:44px;line-height:1.5}
+.va-sales__title p:last-child{font-weight:800;font-size:54px;line-height:1.5}
+.va-sales__gword{display:inline-block;font-weight:900;font-size:60px;letter-spacing:-3px;color:transparent;margin-right:4px;
+  background:linear-gradient(82.74deg,#1d2086 1.06%,#363ad4 52.82%,#8a8ce6 55.18%,#363ad4 82.94%,#262ab0 98.95%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 17px rgba(44,49,203,.3))}
+.va-sales__line{width:500px;max-width:80%;height:2px;margin:45px auto 0;position:relative;left:11px;background:linear-gradient(90deg,rgba(102,106,221,0),rgba(102,106,221,.7) 49%,rgba(102,106,221,0))}
+.va-perks{display:flex;gap:20px;width:1149px;max-width:calc(100% - 32px);margin:43px auto 0;filter:drop-shadow(0 4px 2px rgba(0,0,0,.1))}
+.va-perk{flex:1 1 0;min-width:0;height:118px;display:flex;align-items:center;gap:20px;padding:10px 30px;background:#fff;border:1px solid rgba(0,0,0,.2);border-radius:10px;overflow:hidden;
+  box-shadow:0 0 24px rgba(255,255,255,.25);font-size:20px;line-height:1.5;color:var(--ink);text-align:left;white-space:nowrap}
+.va-perk:last-child{gap:16px}
+.va-perk b{font-weight:800}
+.va-perk .va-crop{position:relative;flex:none}
+.va-sales__note{margin-top:32px;font-size:14px;line-height:1.5;color:#878787}
+
+/* 세일즈 링커 연출 — 한 줄로 차례대로 진행 (JS가 단계별 클래스를 붙임)
+   st-deco 배경 장식 → st-hand 손 → st-bubble 말풍선 → st-title 제목 두 줄 차례로(둘째 줄과 함께 '세일즈 링커' 강조) → st-line 구분선 → st-perks 혜택 카드
+   모든 등장이 끝나면 is-idle: 은은한 반복 모션(반짝임·둥실·빛 흐름)만 남음 */
+.va.js .va-sales>.va-spark,.va.js .va-sales>.va-coin,.va.js .va-sales__hand,.va.js .va-sales__bubble,
+.va.js .va-sales__title>p,.va.js .va-sales__gword,.va.js .va-perk{opacity:0}
+.va.js .va-sales__line{transform:scaleX(0)}
+.va-sales__bubble{transform-origin:50% 120%}
+.va-sales__gword{background:linear-gradient(82.74deg,#1d2086 0%,#363ad4 34%,#8a8ce6 44%,#f1f2ff 50%,#8a8ce6 56%,#363ad4 66%,#262ab0 100%);background-size:250% 100%;background-position:85% 0;-webkit-background-clip:text;background-clip:text}
+
+/* 등장 (각 단계 안의 시차는 짧게) */
+.va-sales.st-deco>.va-spark{animation:va-spark-in .4s cubic-bezier(.34,1.4,.64,1) calc(var(--d,0s) * .3) both}
+.va-sales.st-deco>.va-coin{animation:va-coin-in .5s cubic-bezier(.22,1,.36,1) calc(var(--d,0s) * .3) both}
+.va-sales.st-hand .va-sales__hand{animation:va-hand-in .55s cubic-bezier(.34,1.25,.64,1) both}
+.va.js .va-sales.st-bubble .va-sales__bubble{animation:va-bubble-pop .35s cubic-bezier(.34,1.56,.64,1) both}
+.va.js .va-sales.st-title .va-sales__title>p{animation:va-word .9s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-sales.st-title .va-sales__title>p+p{animation-delay:.45s}
+.va.js .va-sales.st-title .va-sales__gword{animation:va-gword-in 1s cubic-bezier(.34,1.45,.64,1) .45s both}
+.va.js .va-sales.st-line .va-sales__line{animation:va-line-x .5s cubic-bezier(.65,0,.35,1) both}
+.va.js .va-sales.st-perks .va-perk{animation:va-perk-in .9s cubic-bezier(.22,1,.36,1) var(--d,0s) both}
+
+/* 대기 모션: 전부 등장한 뒤에만, 느리고 작게 (앞의 등장 애니메이션은 그대로 두고 뒤에 이어 붙임) */
+.va-sales.st-deco.is-idle>.va-spark{animation:va-spark-in .4s cubic-bezier(.34,1.4,.64,1) calc(var(--d,0s) * .3) both,va-twinkle 2s ease-in-out var(--d,0s) infinite}
+.va-sales.st-deco.is-idle>.va-coin{animation:va-coin-in .5s cubic-bezier(.22,1,.36,1) calc(var(--d,0s) * .3) both,va-float 3s ease-in-out var(--d,0s) infinite}
+.va-sales.is-idle .va-sales__hand img{animation:va-float 2.75s ease-in-out infinite}
+.va.js .va-sales.st-bubble.is-idle .va-sales__bubble{animation:va-bubble-pop .35s cubic-bezier(.34,1.56,.64,1) both,slide-top 1.2s ease-in-out infinite alternate-reverse both}
+.va.js .va-sales.st-title.is-idle .va-sales__gword{animation:va-gword-in 1s cubic-bezier(.34,1.45,.64,1) .45s both,va-shine 5s cubic-bezier(.45,0,.25,1) infinite,va-glow 5s ease-in-out infinite}
+
+@keyframes va-spark-in{from{opacity:0;scale:0;rotate:-90deg}to{opacity:1;scale:1;rotate:0deg}}
+@keyframes va-twinkle{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes va-coin-in{from{opacity:0;translate:0 -50px;rotate:-20deg}to{opacity:1;translate:0 0;rotate:0deg}}
+@keyframes va-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes va-hand-in{0%{opacity:0;translate:0 60px;scale:.9;rotate:-6deg}60%{opacity:1;rotate:1.5deg}100%{opacity:1;translate:0 0;scale:1;rotate:0deg}}
+@keyframes va-bubble-pop{from{opacity:0;scale:.6;translate:0 16px}to{opacity:1;scale:1;translate:0 0}}
+@keyframes va-gword-in{0%{opacity:0;scale:.75;translate:0 12px;filter:blur(8px) drop-shadow(0 0 0 rgba(44,49,203,0))}60%{opacity:1;scale:1.06;filter:blur(0) drop-shadow(0 0 26px rgba(54,58,212,.5))}100%{opacity:1;scale:1;translate:0 0;filter:blur(0) drop-shadow(0 0 17px rgba(44,49,203,.3))}}
+@keyframes va-shine{0%{background-position:100% 0}45%,100%{background-position:0% 0}}
+@keyframes va-glow{0%,100%{filter:drop-shadow(0 0 17px rgba(44,49,203,.3))}22%{filter:drop-shadow(0 0 26px rgba(54,58,212,.5))}50%{filter:drop-shadow(0 0 17px rgba(44,49,203,.3))}}
+@keyframes va-line-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes va-perk-in{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+/* 하단 문구: 첫 줄은 덩어리로 → 둘째 줄은 글자 단위로 아래에서 차르르 */
+.va.js .va-sales__bottom.va-rv{opacity:1;transform:none}
+.va.js .va-sales__bottom>p:first-of-type,.va.js .va-sales__bottom .va-sales__coins,.va.js .va-sales__bottom .va-ch{opacity:0}
+.va.js .va-sales__bottom.in>p:first-of-type{animation:va-word .9s cubic-bezier(.22,1,.36,1) both}
+.va.js .va-sales__bottom.in .va-sales__coins{animation:va-coins-fade 1.2s ease both}
+.va.js .va-sales__bottom.in .va-ch{animation:va-char-up .65s cubic-bezier(.22,1,.36,1) calc(.5s + var(--i) * 32ms) both}
+@keyframes va-coins-fade{from{opacity:0}to{opacity:.3}}
+@keyframes va-char-up{from{opacity:0;transform:translateY(70%)}to{opacity:1;transform:none}}
+.va-sales__bottom{position:relative;margin-top:145px;left:10.5px;letter-spacing:-1.5px;white-space:nowrap}
+.va-sales__bottom p:first-of-type{font-weight:500;font-size:30px;line-height:1.5}
+.va-sales__bottom p:last-of-type{font-weight:800;font-size:36px;line-height:1.5;letter-spacing:-1.8px}
+.va-sales__coins{left:50%;top:-58px;width:223px;height:218px;margin-left:-121.5px;opacity:.3}
+.va-coin{position:absolute;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.va-coin>div{position:relative;flex:none;overflow:hidden;opacity:.3}
+.va-coin img{position:absolute}
+
+/* ================= 11. CTA ================= */
+.va-cta{margin-top:-342px;padding:448px 16px 160px;background:#f2f3fc;overflow:hidden;text-align:center}
+.va-cta__bg{position:absolute;top:26px;width:max(2252px,117.292vw);height:max(1267px,65.99vw);margin-left:min(-1098px,-57.188vw);object-fit:cover;opacity:.2;mix-blend-mode:multiply;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000);mask-image:linear-gradient(180deg,transparent,#000)}
+.va-cta__in{position:relative;width:698px;max-width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:110px}
+.va-cta__glow{position:absolute;left:169px;top:229px;width:360px;height:360px}
+.va-cta__head{position:relative}
+.va-cta__eyebrow{font-family:'InkLipquid',var(--suit);font-size:40px;line-height:1.3;color:var(--ink)}
+.va-cta__t1{margin-top:32px;font-weight:700;font-size:44px;line-height:1.2;letter-spacing:-2.2px;color:var(--navy);white-space:nowrap}
+.va-cta__t2{margin-top:8px;font-weight:800;font-size:54px;line-height:1.2;letter-spacing:-2.7px;color:var(--navy);white-space:nowrap}
+.va-picks{position:relative;width:675px;height:176px}
+.va-pick{position:absolute;width:211.67px;height:200px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#fff;border-radius:16px;
+  filter:drop-shadow(0 4px 9.3px rgba(0,0,0,.25));font-weight:800;font-size:26px;line-height:1.2;color:#222;white-space:nowrap}
+.va-pick>img{width:80px;height:80px}
+.va-pick .va-tail{left:50%;top:194px;margin-left:-14.5px}
+.va-pick:nth-child(1){left:0;top:-10px}
+.va-pick:nth-child(2){left:231.67px;top:-40px}
+.va-pick:nth-child(3){left:463.34px;top:11px}
+/* 상담 CTA 연출: 빛 번짐 → 손글씨가 써지듯 → 제목 두 줄 → 말풍선 카드가 꼬리 쪽에서 하나씩 → 버튼, 이후 카드 둥실·버튼 빛 흐름 */
+.va.js .va-cta__in.va-rv{opacity:1;transform:none}
+.va.js .va-cta__glow,.va.js .va-cta__eyebrow,.va.js .va-cta__t1,.va.js .va-cta__t2,.va.js .va-pick,.va.js .va-pick>img,.va.js .va-cta .va-btn--grad{opacity:0}
+.va.js .va-cta__in.in .va-cta__glow{animation:va-glow-in 1.6s ease-out both,va-breathe 6s ease-in-out 1.6s infinite}
+.va.js .va-cta__in.in .va-cta__eyebrow{animation:va-write 1.2s cubic-bezier(.65,0,.35,1) .1s both}
+.va.js .va-cta__in.in .va-cta__t1{animation:va-word .9s cubic-bezier(.22,1,.36,1) .75s both}
+.va.js .va-cta__in.in .va-cta__t2{animation:va-word .9s cubic-bezier(.22,1,.36,1) .9s both}
+.va-pick{transform-origin:50% 115%}
+.va.js .va-cta__in.in .va-pick{animation:va-pick-pop .75s cubic-bezier(.34,1.56,.64,1) var(--pd) both,va-pick-float 4.5s ease-in-out calc(3s + var(--pf)) infinite}
+.va.js .va-cta__in.in .va-pick>img{animation:va-picto-in .6s cubic-bezier(.34,1.8,.64,1) calc(var(--pd) + .22s) both}
+.va-pick:nth-child(1){--pd:1.45s;--pf:0s}
+.va-pick:nth-child(2){--pd:1.6s;--pf:-1.5s}
+.va-pick:nth-child(3){--pd:1.75s;--pf:-3s}
+.va-cta .va-btn--grad{position:relative;overflow:hidden}
+.va-cta .va-btn--grad::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.38),rgba(255,255,255,0));transform:skewX(-20deg);pointer-events:none}
+.va.js .va-cta__in.in .va-btn--grad{animation:va-btn-in .9s cubic-bezier(.22,1,.36,1) 2.2s both}
+.va.js .va-cta__in.in .va-btn--grad::after{animation:va-btn-shine 4.5s ease-in-out 3.2s infinite}
+@keyframes va-glow-in{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+@keyframes va-breathe{0%,100%{scale:1;opacity:1}50%{scale:1.08;opacity:.8}}
+@keyframes va-write{from{opacity:0;clip-path:inset(-12px 100% -12px -12px)}20%{opacity:1}to{opacity:1;clip-path:inset(-12px -12px -12px -12px)}}
+@keyframes va-pick-pop{from{opacity:0;scale:.6;translate:0 24px}to{opacity:1;scale:1;translate:0 0}}
+@keyframes va-pick-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes va-picto-in{from{opacity:0;scale:.4;rotate:-12deg}to{opacity:1;scale:1;rotate:0deg}}
+@keyframes va-btn-in{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+@keyframes va-btn-shine{0%{left:-60%}30%,100%{left:130%}}
+
+/* ================= 반응형 ================= */
+/* 1920보다 넓은 화면(예: 2560×1440): 콘텐츠는 1920과 같은 크기 유지, 배경만 확장.
+   가족 사진은 인물이 함께 커지지 않도록 크기를 고정하고 좌우 끝을 흰 배경으로 부드럽게 흐림 */
+@media (min-width:1921px){
+  .va-family__photo{
+    -webkit-mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%),linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(205deg,rgba(0,0,0,0) 32%,rgba(0,0,0,.16) 58%,rgba(0,0,0,.8) 96%),linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);
+    mask-composite:intersect}
+  .va-family__people{-webkit-mask-image:linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent);mask-image:linear-gradient(90deg,transparent,#000 220px,#000 calc(100% - 220px),transparent)}
+}
+@media (max-width:1240px){
+  .va-card{height:auto;padding-bottom:80px}
+  .va-card__row{position:relative;left:auto;top:auto;transform:none;width:auto;margin:80px auto 0;flex-wrap:wrap;justify-content:center;gap:40px 60px}
+  .va-card__note{position:relative;left:auto;top:auto;margin-top:30px}
+  .va-svc{flex-wrap:wrap;justify-content:center;width:100%;padding:0 16px}
+  .va-facts__big{font-size:56px}
+  .va-stats{flex-wrap:wrap;gap:32px 24px}
+  .va-phone{margin-left:-520px}
+  .va-perk{padding:10px 18px;font-size:17px;gap:12px}
+  .va-svc{width:100%}
+}
+@media (max-width:900px){
+  .va-svc{position:relative;top:auto;margin:120px auto 0}
+  .va-switch{height:auto;padding-bottom:100px}
+  .va-switch__coins{position:relative;top:auto;margin:100px auto 0;left:8px}
+  .va-refund{position:relative;top:auto;width:auto;max-width:817px;padding:0 16px;margin-top:24px}
+  .va-mall{height:auto;padding-bottom:60px}
+  .va-phone{position:relative;left:auto;top:auto;margin:40px auto 0}
+  .va-marquee{position:relative;top:auto;margin-top:-260px}
+  /* .va-mall-wrap{margin-bottom:120px} */
+}
+@media (max-width:768px){
+  .va-only-m{display:block}
+  .va-hide-m{display:none!important}
+  .va-sub40{font-size:20px}
+  .va-h54,.va-switch__head h2,.va-with h2,.va-faq h2,.va-mall__title{font-size:28px}
+  .va-desc{font-size:15px}
+
+  .va-hero{height:auto;padding-bottom:56px}
+  .va-hero__head{padding-top:56px}
+  .va-hero__eyebrow{font-size:20px}
+  .va-hero__ul{top:24px;width:190px;height:8px;margin-left:-96px}
+  .va-hero__pen{width:10px;height:10px;margin:-5px 0 0 -5px}
+  .va-hero__title{margin-top:20px;font-size:36px;letter-spacing:-1.6px}
+  .va-hero__desc{font-size:14px}
+  .va-hero__carousel{margin-top:28px}
+  .va-hero__btn{margin-top:20px;width:calc(100% - 32px);font-size:17px;padding:16px}
+  .va-hero__note{margin-top:20px;padding:0 16px;font-size:12px;line-height:18px}
+  .va-hero__note br{display:none}
+  .va-pcard{width:220px;padding:14px 14px 12px}
+  .va-pcard__img{height:150px}
+  .va-pcard__brand{font-size:12px}.va-pcard__name{font-size:15px}.va-pcard__was{font-size:14px}.va-pcard__now{font-size:18px}.va-pcard__now sup{font-size:12px}.va-pcard__note{font-size:10px}
+
+  .va-choice{padding:80px 16px 60px}
+  .va-script{font-size:38px}
+  .va-choice__list{margin-top:48px}
+  .va-ccard{height:120px;padding:12px 14px}
+  .va-ccard__title{font-size:24px;margin-top:8px}
+  .va-ccard--right .va-ccard__title{margin-top:8px}
+  .va-ccard__sub{font-size:12px}
+  .va-ccard .va-crop{transform:scale(.42);transform-origin:0 0}
+  .va-ccard .va-choice__tv{left:calc(100% - 114.7px)!important;top:calc(100% - 83.6px)!important}
+  .va-ccard .va-choice__pur{left:calc(100% - 107.1px)!important;top:calc(100% - 90.3px)!important}
+  .va-ccard .va-choice__rob{left:calc(100% - 152px)!important;top:calc(100% - 53.3px)!important}
+  .va-ccard--right .va-crop{transform:scale(.44);left:-16px!important;top:calc(100% - 72.8px)!important}
+  .va-mallbar__pill{font-size:14px}.va-mallbar__title{font-size:22px;margin-top:6px}
+
+  .va-prod{padding:60px 16px 80px}
+  .va-prod__t1{font-size:24px}.va-prod__t2{font-size:34px}
+  .va-hl::before{height:20px;left:-4px;right:-4px}
+  .va-checks{margin-top:40px}
+  .va-check{padding:14px 18px;gap:12px;font-size:15px}
+  .va-check__ico{width:22px;height:22px}
+  .va-chevrons{margin-top:36px;transform:scale(.7)}
+  .va-plans{gap:8px;margin-top:40px}
+  .va-plan{padding:20px 6px 18px}
+  .va-plan__name{font-size:16px}
+  .va-plan__type{padding:3px 14px;font-size:13px;margin-top:6px}
+  .va-plan__line{margin-top:12px}
+  .va-plan__month{margin-top:8px;padding:8px 0}
+  .va-plan__month b{font-size:15px}.va-plan__month span{font-size:11px}.va-plan__month small{font-size:10px}
+  .va-plan__gap{height:28px;margin-top:20px}
+  .va-plan__total{margin-top:20px;font-size:14px}
+  .va-plans__bar{bottom:53px;height:40px;font-size:15px;max-width:calc(100% + 16px)}
+
+  .va-card__head{padding-top:60px}
+  .va-card__head .va-h54{white-space:normal}
+  .va-card__deco{display:none}
+  .va-card__row{margin-top:40px;gap:40px}
+  .va-cc{gap:12px;padding:0 12px}
+  .va-cc__img{width:120px;height:194px;border-radius:10px}
+  .va-cc__info{width:210px;gap:14px}
+  .va-cc__name{font-size:17px;white-space:normal}
+  .va-cc__sub{font-size:13px}
+  .va-cc__table th{font-size:12px}.va-cc__table td{font-size:12px;height:30px;padding:6px}.va-cc__table td:first-child{font-size:11px}
+  .va-cc__apply{font-size:13px}
+  .va-card__note{font-size:12px}
+
+  /* 모바일 고객 공감: 화면 한 장 높이, 사진은 아래에 깔고 말풍선은 위쪽 하늘 영역에 지그재그 */
+  .va-family__stage{position:static;width:auto;height:auto;margin:0;transform:none}
+  .va-family{height:100vh;height:100svh;min-height:560px;max-height:900px;padding:0}
+  .va-family__photo,.va-family__people{position:absolute;left:50%;top:auto;width:900px;height:auto;transform:translateX(-40%)}
+  .va-family__photo{bottom:3px;margin:0}
+  .va-family__people{bottom:0;margin:0;width:910px}
+  .va-family__quotes{position:absolute;left:0;right:0;top:0;z-index:1;display:flex;flex-direction:column;gap:clamp(14px,3.8svh,36px);padding:clamp(48px,13svh,130px) 20px 0}
+  .va-quote{position:relative;left:auto!important;top:auto!important;margin:0!important;max-width:330px;gap:8px;font-size:14.5px;line-height:1.45;white-space:normal}
+  .va-quote:nth-child(1),.va-quote:nth-child(3){align-self:flex-end}
+  .va-quote:nth-child(2){align-self:flex-start}
+  .va-quote img{width:14px!important;height:13px!important;align-self:flex-start;margin-top:2px}
+  .va-quote img+p+img{align-self:flex-end;margin:0 0 2px}
+  .va-quote__blob{display:block;left:50%!important;top:50%!important;width:80%;height:90%;transform:translate(-50%,-50%);filter:blur(22px);background:rgba(255,255,255,.85)}
+  .va.js .va-quote.va-rv:nth-child(2){transition-delay:.18s}
+  .va.js .va-quote.va-rv:nth-child(3){transition-delay:.36s}
+
+  .va-switch{padding-bottom:70px}
+  .va-switch__head{padding-top:70px}
+  .va-switch__icon{width:80px;height:80px}
+  .va-switch__curve{display:none}
+  .va-svc{margin:48px auto 0;flex-direction:column;align-items:center;gap:14px}
+  .va-svc__card,.va-svc__card:nth-child(2){width:100%;max-width:400px;height:auto;gap:12px;padding:22px}
+  .va-svc__top h3{font-size:24px}
+  .va-svc__card p{font-size:15px}
+  .va-switch__coins{margin-top:60px;transform:scale(.7)}
+  .va-refund__t1{font-size:18px}.va-refund__t2{font-size:24px}
+  .va-refund__note{font-size:11px}
+  .va-refund__note br{display:none}
+
+  .va-mall-wrap{margin-bottom:0}
+  .va-mall{height:auto;padding-bottom:40px}
+  .va-mall__head{padding-top:56px}
+  .va-mall__eyebrow{font-size:18px;letter-spacing:1.5px}
+  .va-mall__desc{font-size:14px}
+  .va-mall__eyebrow{font-size:19px;letter-spacing:2.5px}
+  .va-mall__title{font-size:32px;letter-spacing:-1px}
+  .va-mall__stage{position:relative;height:430px;margin-top:40px}
+  .va-phone{position:absolute;left:18px;top:0;width:174px;margin:0;gap:12px;z-index:3}
+  .va-bubble{font-size:13px;padding:6px 14px}
+  .va-bubble .va-tail{top:24px}
+  .va-phone__body{height:351.6px}
+  .va-phone__screen{width:155.7px;height:337.1px;border-radius:16px}
+  .va-phone__screen img{width:155.3px;height:336.2px}
+  .va-marquee{position:absolute;top:30px;height:190px;margin:0}
+  .va-marquee--2{display:block;top:230px}
+  .va-marquee__track{gap:12px;padding-left:12px;animation-duration:40s}
+  .va-mcard{width:146px;gap:10px;padding-bottom:12px}
+  .va-mcard h4{font-size:15px}.va-mcard p{margin-top:4px;font-size:10.5px}
+
+  .va-trust{padding:80px 16px 100px}
+  .va-trust__bg{top:auto;bottom:0;width:1200px;height:780px;margin-left:-600px}
+  .va-since{gap:28px}
+  .va-since p{font-size:22px}
+  .va-since__line{height:100px}
+  .va-since__check{transform:scale(.6);margin-bottom:-36px}
+  .va-since__hl{width:270px;height:16px;margin-left:-135px}
+  .va-with{margin-top:120px}
+  .va-with__logo img{width:220px;height:26.7px}
+  .va-with__desc{font-size:14px;margin-top:20px}
+  .va-facts{margin-top:48px}
+  .va-facts__main{padding:24px 28px}
+  .va-facts__main>p:first-child{font-size:15px}
+  .va-facts__big{font-size:36px}
+  .va-stats{display:grid;grid-template-columns:1fr 1fr;gap:28px 10px;padding:28px 0}
+  .va-stat{width:auto;gap:10px}
+  .va-stat p{font-size:14px}.va-stat strong{font-size:22px}
+  .va-awards{gap:10px;margin-top:40px;zoom:.6}
+
+  .va-faq{padding:72px 16px 100px}
+  .va-faq__list{margin-top:40px}
+  .va-faq__q{padding:16px 18px;font-size:15px}
+  .va-faq__q img{width:26px;height:26px}
+  .va-faq__a-in{padding:24px 18px 16px;gap:10px}
+  .va-faq__a-in>span{font-size:15px}.va-faq__a-in>p{font-size:14px}
+  .va-faq__a-in>p br{display:none}
+
+  .va-sales{height:auto;padding-bottom:180px}
+  .va-sales__bg{min-width:0;width:250%;height:100%;object-fit:fill}
+  .va-sales__in{padding-top:70px}
+  .va-sales__bubble{font-size:18px;padding:4px 20px}
+  .va-sales__bubble .va-tail{top:27px}
+  .va-sales__hand{width:200px;height:189px;left:0}
+  .va-sales__title{left:0;letter-spacing:-1px;white-space:normal}
+  .va-sales__title p:first-child{font-size:22px}
+  .va-sales__title p:last-child{font-size:26px}
+  .va-sales__gword{font-size:30px;letter-spacing:-1px}
+  .va-sales__line{left:0;margin-top:28px}
+  .va-perks{flex-direction:column;gap:10px;margin-top:28px}
+  .va-perk{flex:none;height:84px;font-size:15px;padding:10px 20px}
+  .va-sales__note{font-size:12px;margin-top:20px}
+  .va-sales__bottom{left:0;margin-top:80px;white-space:normal;letter-spacing:-.5px}
+  .va-sales__bottom p:first-of-type{font-size:17px}
+  .va-sales__bottom p:last-of-type{font-size:20px;letter-spacing:-.5px}
+  .va-sales__coins{width:150px;height:147px;margin-left:-75px;top:-40px}
+  .va-coin{display:none}
+
+  .va-cta{margin-top:-120px;padding:200px 16px 90px}
+  .va-cta__bg{top:120px;width:1200px;height:675px;margin-left:-600px}
+  .va-cta__in{gap:64px}
+  .va-cta__glow{left:50%;top:150px;margin-left:-150px;width:300px;height:300px}
+  .va-cta__eyebrow{font-size:22px}
+  .va-cta__t1{margin-top:20px;font-size:22px;letter-spacing:-1px}
+  .va-cta__t2{font-size:27px;letter-spacing:-1.2px}
+  .va-picks{width:100%;height:auto;display:flex;justify-content:center;gap:8px}
+  .va-pick{position:relative;left:auto!important;top:auto!important;flex:1 1 0;max-width:120px;height:132px;padding:14px 6px;gap:8px;font-size:14px;border-radius:12px}
+  .va-pick:nth-child(2){top:-16px!important}
+  .va-pick>img{width:44px;height:44px}
+  .va-pick .va-tail{top:123px;transform:scaleY(-1) scale(.7)}
+  .va-btn--grad{width:100%;font-size:17px;padding:16px}
+}
+/* ================= 상담 신청 모달 (body 바로 아래로 이동되므로 .va 밖에서도 동작하도록 독립 스코프) ================= */
+.va-modal{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;padding:16px;font-family:'Pretendard','SUIT',-apple-system,sans-serif;color:#222;line-height:normal;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.va-modal.is-open{display:flex}
+.va-modal *,.va-modal *::before,.va-modal *::after{box-sizing:border-box;margin:0;padding:0}
+:where(.va-modal) button,:where(.va-modal) input,:where(.va-modal) select{font:inherit;color:inherit}
+:where(.va-modal) button{background:none;border:0;cursor:pointer}
+.va-modal__dim{position:absolute;inset:0;background:rgba(9,10,40,.6);animation:va-fade .25s ease}
+.va-modal__dialog{position:relative;display:flex;flex-direction:column;width:410px;max-width:100%;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:hidden;
+  padding:0;background:#fff;border:1px solid #ebebf0;border-radius:8px;box-shadow:0 3px 5px rgba(46,46,66,.08),0 20px 60px rgba(0,0,0,.25);animation:va-rise .3s cubic-bezier(.2,.8,.2,1);outline:0}
+/* 스크롤은 안쪽 레이어에서만 → 스크롤바가 둥근 박스 밖으로 나오지 않음 */
+.va-modal__scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:32px}
+/* Firefox 전용 (크롬·엣지는 아래 ::-webkit-scrollbar 디자인 사용 — 둘 다 걸면 크롬이 기본 막대로 바꿔버림) */
+@supports not selector(::-webkit-scrollbar){.va-modal__scroll{scrollbar-width:thin;scrollbar-color:#fbbf6a transparent}}
+.va-modal__scroll::-webkit-scrollbar{width:12px}
+.va-modal__scroll::-webkit-scrollbar-track{background:transparent;margin:16px 0}
+.va-modal__scroll::-webkit-scrollbar-thumb{border:4px solid transparent;border-radius:12px;background:linear-gradient(180deg,#fed48c,#faa737) padding-box}
+.va-modal__scroll::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#fcc56a,#f08f14) padding-box}
+.va-modal__scroll::-webkit-scrollbar-button{display:none;height:0}
+@keyframes va-fade{from{opacity:0}}
+@keyframes va-rise{from{opacity:0;transform:translateY(24px)}}
+.va-modal__x{position:absolute;top:12px;right:16px;z-index:2;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#999;transition:background .2s,color .2s}
+.va-modal__x:hover{background:#f3f3f6;color:#222}
+
+.va-form{display:flex;flex-direction:column;gap:24px}
+.va-form__head{text-align:center}
+.va-form__head h2,.va-done h2{font-weight:800;font-size:24px;color:#222}
+.va-form__head p{margin-top:8px;font-size:14px;color:#666}
+.va-field{display:flex;flex-direction:column;gap:8px;border:0;min-width:0}
+.va-field__label{display:flex;align-items:flex-start;gap:2px;font-weight:600;font-size:14px;line-height:1.5;color:#222}
+.va-field__label em{font-style:normal;font-weight:400;font-size:15px;color:#e61e26}
+.va-field__label small{align-self:center;font-weight:500;font-size:12px;color:#777}
+legend.va-field__label{float:left;width:100%;margin-bottom:0}
+legend.va-field__label+*{clear:both}
+.va-input{width:100%;height:48px;padding:0 16px;background:#fff;border:1.5px solid #d9d9d9;border-radius:8px;font-size:14px;line-height:24px;color:#222;outline:0;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.va-input::placeholder{color:#666;opacity:.5}
+.va-input:focus{border-color:#faa93b;box-shadow:0 0 0 3px rgba(250,169,59,.15)}
+.va-field.is-err .va-input,.va-field.is-err .va-opt span,.va-field.is-err .va-agree{border-color:#e61e26}
+.va-field__err{display:none;font-size:12px;color:#e61e26}
+.va-field.is-err .va-field__err{display:block}
+.va-opt{position:relative;display:block;cursor:pointer}
+.va-opt input{position:absolute;opacity:0;pointer-events:none}
+.va-opt span{display:flex;align-items:center;height:48px;padding:0 16px;background:#fff;border:1.5px solid #d9d9d9;border-radius:8px;font-weight:300;font-size:14px;line-height:24px;color:#444;transition:background .2s,border-color .2s}
+.va-opt:hover span{border-color:#fbc57a}
+.va-opt input:checked+span{background:#feebd2;border-color:#faa93b}
+.va-opt input:focus-visible+span{box-shadow:0 0 0 3px rgba(250,169,59,.25)}
+.va-select{position:relative}
+.va-select select{padding-right:44px;cursor:pointer}
+.va-select select.is-empty{color:rgba(102,102,102,.5)}
+.va-select select option{color:#222}
+.va-select svg{position:absolute;right:16px;top:15px;pointer-events:none}
+.va-agree{display:flex;align-items:center;gap:4px;padding:14px 16px;border:1px solid #feebd2;border-radius:8px;transition:background .2s,border-color .2s}
+.va-agree.is-on{background:#feebd2}
+.va-agree__chk{position:relative;display:flex;align-items:center;gap:4px;cursor:pointer;font-size:14px;line-height:14px;color:#888}
+.va-agree__chk input{position:absolute;opacity:0;pointer-events:none}
+.va-agree__chk svg{width:9px;height:7.2px;overflow:visible;color:#c9c9c9;transition:color .2s}
+.va-agree__chk b{margin-left:4px;font-weight:500;line-height:20px;color:#c9c9c9;transition:color .2s}
+.va-agree.is-on .va-agree__chk svg,.va-agree.is-on .va-agree__chk b{color:#faa028}
+.va-agree__chk input:focus-visible~span{outline:2px solid #faa93b;outline-offset:2px}
+.va-agree__view{font-size:12px;line-height:14px;color:#888;text-decoration:underline;text-underline-offset:2px}
+.va-privacy{padding:12px 14px;background:#f7f7f9;border-radius:8px;font-size:12px;line-height:1.6;color:#666}
+.va-privacy b{display:inline-block;min-width:56px;font-weight:600;color:#444}
+.va-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.va-submit{display:flex;width:100%;align-items:center;justify-content:center;padding:17.5px 16px;border-radius:8px;font-weight:700;font-size:16px;color:#222;
+  background:linear-gradient(95.72deg,#fed48c .19%,#fde5c1 45.69%,#faa737 99.81%);transition:filter .2s,transform .2s}
+.va-submit:hover{filter:brightness(1.03) saturate(1.1);transform:translateY(-1px)}
+.va-submit:disabled{opacity:.6;cursor:wait;transform:none}
+.va-form__msg{margin-top:-12px;font-size:13px;text-align:center;color:#e61e26}
+.va-form__msg:empty{display:none}
+.va-done{padding:24px 0 0;text-align:center}
+.va-done__icon{width:64px;height:64px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#feebd2}
+.va-done p{margin:10px 0 28px;font-size:14px;line-height:1.6;color:#666}
+html.va-lock,html.va-lock body{overflow:hidden!important}
+
+/* ================= 하단 플로팅 CTA ================= */
+.va-float{position:fixed;left:50%;bottom:20px;z-index:2147482000;box-sizing:border-box;width:366px;max-width:calc(100% - 32px);height:52px;margin:0;padding:0 16px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px;
+  font-family:'Pretendard','SUIT',-apple-system,sans-serif;font-weight:800;font-size:16px;line-height:1.2;letter-spacing:-.3px;color:#222;text-decoration:none;white-space:nowrap;word-break:keep-all;
+  background:linear-gradient(95.72deg,#fed48c .19%,#fde5c1 45.69%,#faa737 99.81%);
+  box-shadow:0 0 18px rgba(253,205,123,.6),0 6px 16px rgba(250,167,55,.22);
+  opacity:0;transform:translate(-50%,150%);pointer-events:none;transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .4s ease,box-shadow .3s ease}
+.va-float.is-show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.va-float.is-show:hover{transform:translate(-50%,-2px);box-shadow:0 0 24px rgba(253,205,123,.8),0 8px 20px rgba(250,167,55,.3)}
+.va-float:focus-visible{outline:3px solid #1d2087;outline-offset:3px}
+.va-float::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.45),rgba(255,255,255,0));transform:skewX(-20deg);pointer-events:none}
+.va-float.is-show::after{animation:va-btn-shine 4.5s ease-in-out 1s infinite}
+@media (max-width:768px){
+  .va-float{bottom:calc(12px + env(safe-area-inset-bottom));width:calc(100% - 24px);max-width:none;height:60px;border-radius:12px;font-size:17px;letter-spacing:-.3px}
+}
+@media (prefers-reduced-motion:reduce){
+  .va-float{transition:opacity .2s}
+  .va-float.is-show::after{animation:none}
+}
+@media (max-width:480px){
+  .va-modal{padding:12px}
+  .va-modal__scroll{padding:28px 20px 24px}
+  .va-form{gap:20px}
+  .va-form__head h2,.va-done h2{font-size:21px}
+  .va-form__head p{font-size:13px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .va.js .va-with__logo img,.va.js .va-with__logo h2,.va.js .va-with__2,.va.js .va-with__desc,.va.js .va-stat,.va.js .va-award__laurel,.va.js .va-award__txt>p,.va.js .va-award__spark,.va.js .va-stats::before,.va.js .va-stats::after{animation:none!important;opacity:1;transform:none;translate:none;scale:none;rotate:none;clip-path:none}
+  .va.js .va-switch__icon,.va.js .va-switch__head .va-ln,.va.js .va-svc__card,.va.js .va-switch__coins,.va.js .va-refund>*,.va.js .va-switch__line{animation:none!important;opacity:1;transform:none;translate:none;scale:none;rotate:none}
+  .va.js .va-hero__eyetxt,.va.js .va-hero .va-ln,.va.js .va-pcard,.va.js .va-hero__btn,.va.js .va-hero__note{animation:none!important;opacity:1;translate:none}
+  .va.js .va-hero__ul img{animation:none!important;-webkit-mask-image:none;mask-image:none}
+  .va-hero__pen{display:none}
+  .va.js .va-cta__glow,.va.js .va-cta__eyebrow,.va.js .va-cta__t1,.va.js .va-cta__t2,.va.js .va-pick,.va.js .va-pick>img,.va.js .va-cta .va-btn--grad,.va-cta .va-btn--grad::after{animation:none!important;opacity:1;clip-path:none;translate:none;scale:none;rotate:none}
+  .va.js .va-sales__bottom>p:first-of-type,.va.js .va-sales__bottom .va-ch{animation:none!important;opacity:1;transform:none}
+  .va.js .va-sales__bottom .va-sales__coins{animation:none!important;opacity:.3}
+  .va.js .va-sales>.va-spark,.va.js .va-sales>.va-coin,.va.js .va-sales__hand,.va.js .va-sales__hand img,.va.js .va-sales__bubble,.va.js .va-sales__title>p,.va.js .va-sales__gword,.va.js .va-sales__line,.va.js .va-perk{animation:none!important;transition:none!important;opacity:1;transform:none;translate:none;scale:none;rotate:none}
+  .va.js .va-choice__head .va-ln,.va.js .va-choice__head .va-script,.va.js .va-choice__list .va-ccard,.va.js .va-choice__list .va-crop,.va.js .va-choice__list .va-choice__plus,.va.js .va-choice__list .va-mallbar{animation:none!important;opacity:1;translate:none;scale:none;clip-path:none}
+  .va.js .va-mall__head .va-ln,.va.js .va-mall__head~.va-mall__stage .va-phone,.va.js .va-mall__head~.va-mall__stage .va-bubble,.va.js .va-mall__head~.va-mall__stage .va-marquee{animation:none!important;opacity:1;transform:none}
+  .va.js .va-cc.va-rv{opacity:1;transform:none;transition:none}
+  .va.js .va-card__head .va-sub40,.va.js .va-card__head .va-ch{animation:none!important;opacity:1;transform:none;filter:none}
+  .va.js .va-prod__head>*,.va.js .va-prod__head .va-hl::before{animation:none!important;opacity:1;transform:none;filter:none}
+  .va.js .va-check.va-rv,.va.js .va-check__ico circle,.va.js .va-check__ico path{transition:none!important;stroke-dashoffset:0}
+  .va-modal__dim,.va-modal__dialog{animation:none}
+  .va-marquee__track{animation:none}
+  .va-pcard{transition:none}
+  .va.js .va-rv{opacity:1;transform:none;transition:none}
+  .va.js .va-curve__draw{stroke-dashoffset:0;transition:none}
+  .va.js .va-since .va-w,.va.js .va-since__txt,.va.js .va-since__line,.va.js .va-since__hl,.va.js .va-since__check-draw{animation:none!important;opacity:1;transform:none;filter:none;stroke-dashoffset:0}
+  .va-curve__dot{display:none}
+}
+</style>
+
+<div class="va" id="va-landing">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="va-hero">
+    <div class="va-hero__bg"><img src="images/hero-bg.jpg" alt=""></div>
+    <div class="va-hero__head">
+      <p class="va-hero__eyebrow"><span class="va-hero__eyetxt">인기가전 혜택까지!</span><span class="va-hero__ul"><img src="images/hero-underline.svg" alt=""><span class="va-hero__pen"></span></span></p>
+      <h1 class="va-hero__title"><span class="va-ln" style="--d:.85s">가전도 받고</span><span class="va-ln" style="--d:1s">100% 환급도 챙기고!</span></h1>
+      <p class="va-hero__desc"><span class="va-ln" style="--d:1.25s">필요한 가전은 먼저 받아 사용하고,</span><span class="va-ln" style="--d:1.35s">계약조건 충족 시 납부금도 100% 돌려 받을 수 있어</span><span class="va-ln" style="--d:1.45s">가전을 0원에 마련할 수 있습니다.</span></p>
+    </div>
+
+    <div class="va-hero__carousel" data-va-carousel data-start="4">
+      <div class="va-pcard"><div class="va-pcard__img"><img class="cover" src="images/hero-prod-1.png" alt="세라젬 의료침대 마스터"></div><div class="va-pcard__body"><p class="va-pcard__brand">세라젬</p><p class="va-pcard__name">세라젬 의료침대 마스터</p><p class="va-pcard__was">5,200,000원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img src="images/hero-prod-2.png" alt="삼성 Bespke 양문형 냉장고 651L"></div><div class="va-pcard__body"><p class="va-pcard__brand">삼성</p><p class="va-pcard__name">삼성 Bespke 양문형 냉장고 651L</p><p class="va-pcard__was">1,429,000원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img class="cover" src="images/hero-prod-3.png" alt="LG 나노셀 AI TV 75"></div><div class="va-pcard__body"><p class="va-pcard__brand">LG</p><p class="va-pcard__name">LG 나노셀 AI TV 75</p><p class="va-pcard__was">1,810,000</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img src="images/hero-prod-4.png" alt="LG 퓨리케어 AI 360˚ 공기청정기 플러스"></div><div class="va-pcard__body"><p class="va-pcard__brand">LG</p><p class="va-pcard__name">LG 퓨리케어 AI 360˚ 공기청정기 플러스</p><p class="va-pcard__was">745,990원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img src="images/hero-prod-5.png" alt="로보락 Q revo Curv 로봇청소기"></div><div class="va-pcard__body"><p class="va-pcard__brand">로보락</p><p class="va-pcard__name">로보락 Q revo Curv 로봇청소기</p><p class="va-pcard__was">1,720,000원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img class="cover" src="images/hero-prod-6.png" alt="LG 휘센 오브제컬렉션 제습기25L"></div><div class="va-pcard__body"><p class="va-pcard__brand">LG</p><p class="va-pcard__name">LG 휘센 오브제컬렉션 제습기25L</p><p class="va-pcard__was">615,000원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img src="images/hero-prod-7.png" alt="LG 휘센 AI 오브제컬렉션 쿨 에어컨 싱글"></div><div class="va-pcard__body"><p class="va-pcard__brand">LG</p><p class="va-pcard__name">LG 휘센 AI 오브제컬렉션 쿨 에어컨 싱글</p><p class="va-pcard__was">4,337,456원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+      <div class="va-pcard"><div class="va-pcard__img"><img src="images/hero-prod-8.png" alt="LG 디오스 오브제컬렉션 식기세척기"></div><div class="va-pcard__body"><p class="va-pcard__brand">LG</p><p class="va-pcard__name">LG 디오스 오브제컬렉션 식기세척기</p><p class="va-pcard__was">1,198,000원</p><p class="va-pcard__now">혜택가 0원<sup>*</sup></p><p class="va-pcard__note">만기시 가전값까지 전액 환급</p></div></div>
+    </div>
+
+    <a class="va-btn va-btn--white va-hero__btn" href="#va-form" role="button" data-va-open-form>받을 수 있는 가전 확인하기</a>
+    <p class="va-hero__note">*계약조건 충족 후 만기 해약 시 총 납부액 100% 환급 기준입니다.<br>월 납입금이 발생하며, 중도해지·서비스 이용 시 환급 기준이 달라질 수 있습니다.</p>
+  </section>
+
+  <!-- ============ 2. 가전 + 라이프서비스 ============ -->
+  <section class="va-choice">
+    <div class="va-choice__head va-rv" data-va-late>
+      <span class="va-script va-c va-hide-m" data-va-drift="-100" style="top:40px;width:280px;margin-left:-294px;text-align:right;--d:.35s">Home appliances</span>
+      <span class="va-script va-c va-hide-m" data-va-drift="100" style="top:105px;width:206px;margin-left:144px;text-align:right;--d:.5s">Life service</span>
+      <p class="va-sub40" style="position:relative"><span class="va-ln" style="--d:0s">가전만 드리지 않아요!</span></p>
+      <h2 class="va-h54" style="position:relative;margin-top:8px"><span class="va-ln" style="--d:.07s">가전부터</span><span class="va-ln" style="--d:.14s">라이프서비스까지.</span></h2>
+    </div>
+    <div class="va-choice__list va-rv" data-va-late>
+      <div class="va-ccard">
+        <div class="va-ccard__txt">
+          <p class="va-ccard__label">choice 1</p>
+          <p class="va-ccard__title">가전</p>
+          <p class="va-ccard__sub">다양한 최신 가전 중 선택!</p>
+        </div>
+        <div class="va-crop va-choice__tv" style="left:412px;top:-38px;width:305px;height:182px"><img src="images/choice-tv.png" alt="" style="left:-8.52%;top:-48.08%;width:117.05%;height:196.15%"></div>
+        <div class="va-crop va-choice__pur" style="left:430px;top:-54px;width:112px;height:214px"><img src="images/choice-purifier.png" alt="" style="left:-69.64%;top:0;width:239.29%;height:125.23%"></div>
+        <div class="va-crop va-choice__rob" style="left:323px;top:34px;width:154px;height:126px"><img src="images/choice-robot.png" alt="" style="left:0;top:0;width:100%;height:122.22%"></div>
+      </div>
+      <div class="va-ccard va-ccard--right">
+        <div class="va-crop" style="left:-19px;top:-4.5px;width:274px;height:174px"><img src="images/choice-car.png" alt="" style="left:-16.78%;top:-20.92%;width:124.01%;height:120.92%"></div>
+        <div class="va-ccard__txt">
+          <p class="va-ccard__label">choice 2</p>
+          <p class="va-ccard__title">라이프 서비스</p>
+          <p class="va-ccard__sub"><b>상조</b>ㆍ결혼ㆍ크루즈 폭 넓게 선택할 수 있어요!</p>
+        </div>
+      </div>
+      <img class="va-choice__plus" src="images/icon-plus.svg" alt="+">
+      <div class="va-mallbar">
+        <div class="va-mallbar__bg"><div><img class="va-fill" src="images/mall-phone-screen.png" alt=""></div></div>
+        <span class="va-mallbar__pill">상시</span>
+        <p class="va-mallbar__title">보람 복지몰 혜택까지</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. 올인원598 ============ -->
+  <section class="va-prod">
+    <div class="va-prod__head va-rv" data-va-late>
+      <p class="va-prod__t1">보람상조피플(주)와 함께하는</p>
+      <p class="va-prod__t2"><span class="va-hl">보람피플 올인원598</span></p>
+      <p class="va-desc va-prod__desc">가전은 먼저 받고 만기 시 납부금 100% 환급이 가능한 가전결합 상조상품입니다.<br>납부기간 동안 상조 물가에 대한 보호를 받으면서<br>가전제품 반납 또는 위약금에 대한 부담을 없앴습니다.<br>(※의무납 60회 이후)</p>
+    </div>
+    <div class="va-checks">
+      <div class="va-check va-rv" data-va-late style="--d:0s"><svg class="va-check__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#222" stroke-width="2" pathLength="1" transform="rotate(-90 16 16)"/><path d="M10.7 16.3L14.9 20.3L21.3 12.6" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg><p>가전제품 <b>선제공</b></p></div>
+      <div class="va-check va-rv" data-va-late style="--d:.15s"><svg class="va-check__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#222" stroke-width="2" pathLength="1" transform="rotate(-90 16 16)"/><path d="M10.7 16.3L14.9 20.3L21.3 12.6" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg><p>1년 365일 <b>다양한 할인 혜택</b></p></div>
+      <div class="va-check va-rv" data-va-late style="--d:.3s"><svg class="va-check__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#222" stroke-width="2" pathLength="1" transform="rotate(-90 16 16)"/><path d="M10.7 16.3L14.9 20.3L21.3 12.6" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg><p>아들부터 손주까지, <b>최대 5명의 경조사</b>까지 준비!<small>(최대 5구좌 가능)</small></p></div>
+    </div>
+    <div class="va-chevrons"><img src="images/icon-chevrons-down.svg" alt=""></div>
+    <div class="va-plans va-rv">
+      <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">1형</p><span class="va-plan__line"></span><div class="va-plan__month"><b>29,900원</b><span>(29,900×1구좌)</span><small>납부 도중 1회 행사 가능</small></div><div class="va-plan__gap"></div><p class="va-plan__total">5,980,000원</p></div>
+      <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">2형</p><span class="va-plan__line"></span><div class="va-plan__month"><b>59,800원</b><span>(29,900×2구좌)</span><small>납부 도중 2회 행사 가능</small></div><div class="va-plan__gap"></div><p class="va-plan__total">11,960,000원</p></div>
+      <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">3형</p><span class="va-plan__line"></span><div class="va-plan__month"><b>89,700원</b><span>(29,900×3구좌)</span><small>납부 도중 3회 행사 가능</small></div><div class="va-plan__gap"></div><p class="va-plan__total">17,940,000원</p></div>
+      <p class="va-plans__bar">만기환급액&nbsp;<b>100% 지급</b></p>
+    </div>
+  </section>
+
+  <!-- ============ 4. 카드 할인 ============ -->
+  <section class="va-card">
+    <div class="va-card__bg"></div>
+    <img class="va-card__deco va-c" src="images/card-bg-1.png" alt="" style="top:44px;width:346px;height:532px;margin-left:-664px;opacity:.15">
+    <img class="va-card__deco va-c" src="images/card-bg-2.png" alt="" style="top:-50px;width:566px;height:777px;margin-left:-16px;opacity:.08">
+    <img class="va-card__deco va-c" src="images/card-bg-3.png" alt="" style="top:214px;width:672px;height:723px;margin-left:505px;opacity:.05">
+    <div class="va-card__head va-rv" data-va-late>
+      <p class="va-sub40">롯데카드, 우리카드 회원이라면 누구나,</p>
+      <h2 class="va-h54" style="line-height:1.5" data-va-chars>최대 25,000원 월납 청구 할인</h2>
+    </div>
+    <div class="va-card__row">
+      <div class="va-cc va-rv" data-va-late style="--d:0s">
+        <div class="va-cc__img"><img class="va-fill" src="images/card-lotte.png" alt="LOCA X Special SE 카드"></div>
+        <div class="va-cc__info">
+          <div><p class="va-cc__name">LOCA X Speical SE카드</p><p class="va-cc__sub">렌탈료 최대 <b>25,000원</b> 할인</p></div>
+          <table class="va-cc__table"><tr><th>전월 실적</th><th>할인 금액</th></tr><tr><td>30만원 이상</td><td>13,000원</td></tr><tr><td>70만원 이상</td><td>15,000원</td></tr><tr><td>150만원 이상</td><td>25,000원</td></tr></table>
+          <p class="va-cc__apply">신규_롯데카드 발급신청<span>1522-2800</span></p>
+        </div>
+      </div>
+      <div class="va-cc va-rv" data-va-late style="--d:.15s">
+        <div class="va-cc__img"><img class="va-fill" src="images/card-woori.png" alt="현대렌탈서비스 우리카드"></div>
+        <div class="va-cc__info">
+          <div><p class="va-cc__name">현대렌탈서비스 우리카드</p><p class="va-cc__sub">렌탈료 최대 <b>25,000원</b> 할인</p></div>
+          <table class="va-cc__table"><tr><th>전월 실적</th><th>할인 금액</th></tr><tr><td>30만원 이상</td><td>15,000원</td></tr><tr><td>70만원 이상</td><td>17,000원</td></tr><tr><td>150만원 이상</td><td>25,000원</td></tr></table>
+          <p class="va-cc__apply">신규_우리카드 발급신청<span>1800-4139</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="va-card__note">*상시 혜택으로 없어질 수 있습니다.</p>
+  </section>
+
+  <!-- ============ 5. 고객 공감 ============ -->
+  <div class="va-family-pin" data-va-pin>
+  <section class="va-family">
+    <div class="va-family__stage">
+    <img class="va-family__photo va-c" src="images/family-photo.jpg" alt="" loading="lazy">
+    <div class="va-family__quotes">
+      <div class="va-quote va-c va-rv" style="top:164px;margin-left:17px">
+        <span class="va-quote__blob" style="left:189px;top:-13px"></span>
+        <img src="images/quote-open.svg" alt=""><p style="position:relative">우리 아이 결혼, 목돈 들어갈 텐데<br>미리 조금씩 준비할 순 없을까?</p><img src="images/quote-close.svg" alt="">
+      </div>
+      <div class="va-quote va-c va-rv" style="top:356px;margin-left:-553px">
+        <span class="va-quote__blob" style="left:241px;top:-13px"></span>
+        <img src="images/quote-open.svg" alt=""><p style="position:relative">언젠가 겪게 될 큰일,<br>필요한 순간을 위해 미리 준비하고 싶어요.</p><img src="images/quote-close.svg" alt="">
+      </div>
+      <div class="va-quote va-c va-rv" style="top:667px;margin-left:1px">
+        <span class="va-quote__blob" style="left:224px;top:-13px"></span>
+        <img src="images/quote-open.svg" alt=""><p style="position:relative">부모님 크루즈 여행 보내드리고 싶은데,<br>한 번에 큰돈 쓰려니 부담돼요.</p><img src="images/quote-close.svg" alt="">
+      </div>
+    </div>
+    <img class="va-family__people va-c" src="images/family-photo-top.png" alt="행복하게 웃는 가족" loading="lazy">
+    </div>
+  </section>
+  </div>
+
+  <!-- ============ 6. 서비스 전환 ============ -->
+  <section class="va-switch">
+    <img class="va-switch__bg va-switch__bg--top va-c" src="images/switch-bg.png" alt="" style="top:0" loading="lazy">
+    <img class="va-switch__bg va-c" src="images/switch-bg.png" alt="" style="top:828.23px" loading="lazy">
+    <svg class="va-switch__curve va-c" id="va-switch-curve" viewBox="0 0 2248.94 548.216" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="va-curve-grad" x1="0" y1="271.367" x2="2246" y2="271.367" gradientUnits="userSpaceOnUse">
+          <stop offset=".00089" stop-color="#272CB0"/><stop offset=".4615" stop-color="#969AE8"/><stop offset=".8606" stop-color="#272CB0"/>
+        </linearGradient>
+        <radialGradient id="va-curve-glow">
+          <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".2" stop-color="#d6d8ff" stop-opacity=".7"/><stop offset=".55" stop-color="#8f93ee" stop-opacity=".22"/><stop offset="1" stop-color="#6a6fe6" stop-opacity="0"/>
+        </radialGradient>
+        <!-- 리본을 왼쪽→오른쪽으로 그려 나가는 마스크 (두꺼운 선을 경로 따라 그림) -->
+        <filter id="va-curve-feather" filterUnits="userSpaceOnUse" x="-150" y="-150" width="2550" height="850"><feGaussianBlur stdDeviation="22"/></filter>
+        <mask id="va-curve-mask" maskUnits="userSpaceOnUse" x="-150" y="-150" width="2550" height="850">
+          <path class="va-curve__draw" filter="url(#va-curve-feather)" pathLength="1" stroke="#fff" stroke-width="110" stroke-linecap="round" d="M0 405C51.05 404.6 99.88 397.6 145.22 380C419.83 275.8 659.37 0 951.49 74C1073.93 115 1147.06 268.8 1068.66 378.7C1058.41 395.7 1046.2 412.6 1038.95 433.9C1031.12 455.1 1034.72 481.1 1045.74 500C1081.76 551.3 1141.78 537.6 1187.28 533.4C1235.24 526.1 1281.34 513.3 1326.86 498.8C1417.65 469.2 1506.02 433.5 1591.82 391.3C1772.97 291.1 1949.22 182.5 2126.05 75C2167.06 49.9 2208.21 24.7 2248.94 4.8"/>
+        </mask>
+      </defs>
+      <path mask="url(#va-curve-mask)" d="M0 390.296C0 400.296 0 410.296 0 420.296C51.0511 419.913 99.8794 405.04 145.216 387.442C419.834 283.247 659.367 15.3821 951.486 84.6344C1073.93 125.004 1147.06 278.787 1068.66 388.744C1058.41 405.714 1046.2 422.567 1038.95 443.853C1031.12 465.098 1034.72 491.131 1045.74 510.028C1081.76 561.292 1141.78 547.587 1187.28 543.354C1235.24 536.134 1281.34 523.291 1326.86 508.793C1417.65 479.187 1506.02 443.481 1591.82 401.343C1772.97 301.134 1949.22 192.499 2126.05 85.0163C2167.06 59.9502 2208.21 34.7165 2248.94 9.59079C2246.98 6.39386 2245.02 3.19693 2243.06 0C2202.2 24.8407 2160.89 49.8066 2119.73 74.5967C1942.35 180.851 1765.07 288.507 1584.18 387.042C1500.2 427.592 1411.06 463.024 1321.39 491.573C1276.38 505.601 1230.83 517.913 1184.58 524.558C1140.76 530.086 1083.82 534.74 1063.26 500.563C1042.73 467.693 1064.07 433.467 1086.25 399.64C1173.51 281.401 1091.46 105.278 960.183 63.0463C639.419 -11.4595 404.479 263.095 134.7 360.349C91.0556 377.042 44.7935 390.348 0 390.296Z" fill="url(#va-curve-grad)" fill-opacity=".1"/>
+      <!-- 경로를 따라 이동하는 빛 -->
+      <g class="va-curve__dot" opacity="0">
+        <circle r="40" fill="url(#va-curve-glow)"/>
+        <circle r="3.5" fill="#fff"/>
+      </g>
+    </svg>
+    <div class="va-switch__head va-rv" data-va-late>
+      <img class="va-switch__icon" src="images/icon-switch-3d.png" alt="" loading="lazy">
+      <h2><span class="va-ln" style="--d:.35s">필요한 순간,</span><span class="va-ln" style="--d:.5s"><b>원하는 서비스로 바꿔 쓰세요.</b></span></h2>
+      <div class="va-switch__line"></div>
+      <p class="va-desc"><span class="va-ln" style="--d:.95s">갑자기 찾아온 결혼·장례, 혼자 복잡하게 준비하지 마세요.</span><span class="va-ln" style="--d:1.05s">필요한 순간 준비된 전문서비스로 간편하게 이용할 수 있습니다.</span></p>
+    </div>
+    <div class="va-svc va-rv" data-va-late data-va-then-draw="#va-switch-curve">
+      <div class="va-svc__card">
+        <div class="va-svc__top"><h3>결혼</h3><div class="va-svc__icon" style="width:61px;height:70px"><img src="images/icon-ring-ship.png" alt="" style="left:-153.82%;top:-24.47%;width:439.03%;height:288.1%" loading="lazy"></div></div>
+        <p>본식 스드메 1부 (부케포함)<br>스튜디오 촬영 스드메 3부<br>리무진 픽업</p>
+      </div>
+      <div class="va-svc__card">
+        <div class="va-svc__top"><h3>장례</h3><div class="va-svc__icon" style="width:62px;height:70px"><img src="images/icon-urn.png" alt="" style="left:-236.25%;top:-115.57%;width:363.36%;height:244.81%" loading="lazy"></div></div>
+        <p>관과 수의<br>특급 장의차<br>의전용품 및 장례지도사 지원</p>
+      </div>
+      <div class="va-svc__card">
+        <div class="va-svc__top"><h3>크루즈</h3><div class="va-svc__icon" style="width:90px;height:70px;transform:scaleX(-1)"><img src="images/icon-ring-ship.png" alt="" style="left:-16.57%;top:-220.75%;width:375.54%;height:367.63%" loading="lazy"></div></div>
+        <p>크루즈 항공료 및 식사<br>크루즈 캐빈 및 여행지 호텔<br>크루즈 인솔자 및 가이드</p>
+      </div>
+    </div>
+    <div class="va-switch__coins va-c">
+      <div class="va-crop" style="inset:0"><img src="images/icon-coins-stack.png" alt="" style="left:-.12%;top:-43.52%;width:294.13%;height:187.04%" loading="lazy"></div>
+      <div class="va-crop" style="left:0;top:-3px;width:145px;height:141px"><img src="images/icon-coins-stack.png" alt="" style="left:-.12%;top:-43.52%;width:294.13%;height:187.04%" loading="lazy"></div>
+    </div>
+    <div class="va-refund va-rv" data-va-late data-va-scope=".va-switch">
+      <p class="va-refund__t1">만약 서비스 받을 일이 없다면?</p>
+      <p class="va-refund__t2">만기 시, 100% 환급</p>
+      <div class="va-plans va-plans--sm">
+        <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">1형</p><div class="va-plan__gap"></div><p class="va-plan__total">5,980,000원</p></div>
+        <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">2형</p><div class="va-plan__gap"></div><p class="va-plan__total">11,960,000원</p></div>
+        <div class="va-plan"><p class="va-plan__name">올인원598</p><p class="va-plan__type">3형</p><div class="va-plan__gap"></div><p class="va-plan__total">17,940,000원</p></div>
+        <p class="va-plans__bar">만기환급액&nbsp;<b>100% 지급</b></p>
+      </div>
+      <p class="va-refund__note">*만기 전 서비스 이용 시 잔여금 및 차액이 발생할 수 있으며,<br>서비스 이용 후에는 만기환급이 적용되지 않습니다. 세부 조건은 계약내용에 따릅니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ 7. 보람몰 ============ -->
+  <div class="va-mall-wrap">
+    <section class="va-mall">
+      <div class="va-mall__bgs va-hide-m">
+      <div class="va-mall__deco va-c va-hide-m" style="top:-1686.82px;width:2152.63px;height:3401.59px;margin-left:-1644.8px"><div style="width:676.53px;height:3464.19px"><img class="va-fill" src="images/mall-bg-2.jpg" alt="" loading="lazy"></div></div>
+      <div class="va-mall__deco va-c va-hide-m" style="top:-431.4px;width:2145.61px;height:3387.62px;margin-left:-621.61px"><div style="width:676.53px;height:3448.56px"><img class="va-fill" src="images/mall-bg-1.jpg" alt="" loading="lazy"></div></div>
+      <div class="va-mall__deco va-c va-hide-m" style="top:-1824px;width:2145.61px;height:3387.62px;margin-left:-747.02px"><div style="width:676.53px;height:3448.56px"><img class="va-fill" src="images/mall-bg-1.jpg" alt="" loading="lazy"></div></div>
+      </div>
+      <div class="va-mall__head va-rv" data-va-late>
+        <p class="va-mall__eyebrow"><span class="va-ln" style="--d:0s">가입 직후 바로 사용 가능!</span></p>
+        <h2 class="va-mall__title"><span class="va-ln" style="--d:.14s">1년 365일 보람몰로</span><span class="va-ln" style="--d:.26s">삶의 질을 높이세요!</span></h2>
+        <p class="va-mall__desc"><span class="va-ln" style="--d:.42s">결혼, 여행처럼 특별한 날이 아니더라도 사용 가능!</span><span class="va-ln" style="--d:.52s">영화부터 여행까지, 365일 보람복지몰 혜택을 누리세요.</span></p>
+      </div>
+      <div class="va-mall__stage">
+      <div class="va-phone">
+        <div class="va-bubble">모바일로 간편한 신청<span class="va-tail"><img src="images/tail-white.svg" alt=""></span></div>
+        <div class="va-phone__body">
+          <div class="va-phone__screen"><img src="images/mall-phone-screen.png" alt="보람복지몰 모바일 화면" loading="lazy"></div>
+          <img class="va-phone__frame" src="images/mall-phone-frame.png" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="va-marquee">
+        <div class="va-marquee__track" data-va-marquee>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-hotel.jpg" alt="" style="left:-38.1%;top:-13.5%;width:163.39%;height:127.55%" loading="lazy"></div><div><h4>호텔 등 숙박시설</h4><p>국내ㆍ외 16만개 숙박시설<br>최대 60% 할인</p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-train.jpg" alt="" style="left:-30.13%;top:-6.85%;width:136.03%;height:107%" loading="lazy"></div><div><h4>기차여행 예매</h4><p>기차여행 만들기 서비스<br>예약 최대 35% 할인</p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-appliance.jpg" alt="" style="left:-135.73%;top:-36.63%;width:245.3%;height:162.21%" loading="lazy"></div><div><h4>종합 가전제품</h4><p>대ㆍ소형 브랜드 가전<br>최대 30% 할인</p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-movie.jpg" alt="" style="left:-37.6%;top:-7.44%;width:175.11%;height:137.35%" loading="lazy"></div><div><h4>영화ㆍ공연</h4><p>영화관람권, 공연 예매<br>최대 30% 할인</p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-golf.jpg" alt="" style="left:-25.5%;top:-15.45%;width:179.24%;height:140.43%" loading="lazy"></div><div><h4>골프 예약</h4><p><b>전국 골프장 예약<br>상시 할인</b></p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img src="images/mall-travel.jpg" alt="" style="left:-78.02%;top:-102.21%;width:267.68%;height:210.55%" loading="lazy"></div><div><h4>국내 여행</h4><p><b>여행 패키지 상품</b><br><b>상시</b> 할인</p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img class="va-fill" src="images/mall-health.jpg" alt="" loading="lazy"></div><div><h4>건강검진</h4><p><b>800여개 종합 건강검진<br>상품 특별가 이용</b></p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img class="va-fill" src="images/mall-sports.jpg" alt="" loading="lazy"></div><div><h4>스포츠 센터</h4><p><b>피트니스, 필라테스 등</b><br><b>최대 60% 할인</b></p></div></div>
+          <div class="va-mcard"><div class="va-mcard__img"><img class="va-fill" src="images/mall-hotel.jpg" alt="" loading="lazy"></div><div><h4>자기계발</h4><p><b>도서 상시 10% 할인,<br>5% 적립, 100% 무료 발송</b></p></div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 8. 보람상조 신뢰 ============ -->
+  <section class="va-trust">
+    <img class="va-trust__bg va-c" src="images/trust-bg.jpg" alt="" loading="lazy">
+    <div class="va-since va-rv" data-va-since>
+      <p><span class="va-w" style="--d:0s"><b>1991년</b></span> <span class="va-w" style="--d:.08s">부터</span> <span class="va-w va-w--pop" style="--d:.16s"><b>쭉!</b></span></p>
+      <span class="va-since__line"></span>
+      <div class="va-since__check">
+        <svg viewBox="0 0 102.239 96.7795" fill="none" aria-hidden="true">
+          <!-- 손으로 긋듯 짧은 획 → 긴 획 순서로 드러나게 하는 마스크 -->
+          <mask id="va-check-mask" maskUnits="userSpaceOnUse" x="-10" y="-10" width="125" height="120">
+            <path class="va-since__check-draw" pathLength="1" d="M2.5 51.5C12 55 24 69 32.6 93C45 60 66 31 97.5 5.5" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          </mask>
+          <path mask="url(#va-check-mask)" d="M99.8088 10.8458C101.102 9.91808 101.961 8.52097 102.182 6.94471C102.404 5.36944 101.971 3.74409 100.992 2.44334C100.012 1.14258 98.5691 0.27788 96.9937 0.0565743C95.4175 -0.165725 93.8378 0.273538 92.5891 1.26062C92.5891 1.26062 92.5891 1.26062 92.5891 1.26062C90.4359 2.96051 88.2829 4.69112 86.1449 6.46605C58.8554 28.1687 39.1835 59.0887 29.356 91.9446L35.9444 91.9512C30.4177 77.5883 23.5334 63.3465 10.8477 53.2117C8.47976 51.4845 5.80533 50.0011 2.79769 49.2318C2.23194 49.0898 1.62659 49.181 1.11688 49.4777C0.607054 49.775 0.234635 50.2535 0.0794635 50.8156C-0.0757082 51.3777 -0.0015223 51.9795 0.283612 52.4962C0.568868 53.0124 1.04171 53.4013 1.60021 53.5696C1.60021 53.5696 1.60021 53.5696 1.60021 53.5696C3.82453 54.2483 5.94366 55.5212 7.88805 57.0855C18.4924 66.2742 24.8897 80.5029 29.3538 94.1552C30.5625 97.6378 34.8058 97.6686 35.9422 94.1618C47.0561 62.6571 66.6339 34.9631 93.3671 15.5755C95.4878 13.9737 97.6363 12.4038 99.8088 10.8458Z" fill="#E60112"/>
+        </svg>
+      </div>
+      <p><span class="va-since__hl"></span><span class="va-since__txt">누적 회원 <b class="va-since__num"><span data-va-count="340">340</span>만 명</b>의 선택</span></p>
+    </div>
+    <div class="va-with va-rv" data-va-late>
+      <div class="va-with__logo"><img src="images/logo-boram.png" alt="보람상조피플(주)" loading="lazy"><h2>과</h2></div>
+      <h2 class="va-with__2">함께합니다.</h2>
+      <p class="va-with__desc">보람상조피플(주)이 제공·계약하는 올인원598을<br>밸류에셋에서 쉽고 빠르게 상담해 드립니다.</p>
+    </div>
+    <div class="va-facts">
+      <div class="va-facts__main va-rv" data-va-late data-va-counter>
+        <p>선수금</p>
+        <p class="va-facts__big"><span data-va-num="15247" data-va-fmt="jo" data-va-delay="300" data-va-dur="1500">1조 5,247</span>억 원</p>
+        <small>보람그룹 제공자료 기준. 2024.09</small>
+      </div>
+      <div class="va-stats va-rv" data-va-late data-va-counter>
+        <div class="va-stat"><p>누적 가입 회원</p><strong><span data-va-num="340" data-va-delay="300">340</span>만여 명</strong><small>2024.08</small></div>
+        <div class="va-stat"><p>누적 행사 진행</p><strong><span data-va-num="31" data-va-delay="400">31</span>만여 건</strong><small>2024.06</small></div>
+        <div class="va-stat"><p>직영 시설</p><strong><span data-va-num="19" data-va-delay="500">19</span>개</strong><small>2024.08</small></div>
+        <div class="va-stat"><p>국내 영업망</p><strong><span data-va-num="100" data-va-delay="600">100</span>여 개 지점</strong><small>2024.06</small></div>
+      </div>
+      <div class="va-awards va-rv" data-va-late>
+        <div class="va-award">
+          <div class="va-award__laurel"><img src="images/laurel.png" alt="" loading="lazy"></div>
+          <div class="va-award__txt">
+            <p>소비자추천<br>1위 브랜드<br>13년 연속</p>
+            <p class="va-award__rank">1위</p>
+            <span class="va-award__spark" style="left:27.73px;width:45.25px;height:45.25px"><img src="images/sparkle-1.svg" alt=""></span>
+          </div>
+          <div class="va-award__laurel"><img src="images/laurel.png" alt="" loading="lazy"></div>
+        </div>
+        <div class="va-award">
+          <div class="va-award__laurel"><img src="images/laurel.png" alt="" loading="lazy"></div>
+          <div class="va-award__txt">
+            <p>대한민국<br>퍼스트브랜드<br>13년 연속</p>
+            <p class="va-award__rank">1위</p>
+            <span class="va-award__spark" style="left:32.18px;width:48.75px;height:48.75px"><img src="images/sparkle-2.svg" alt=""></span>
+          </div>
+          <div class="va-award__laurel"><img src="images/laurel.png" alt="" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. FAQ ============ -->
+  <section class="va-faq">
+    <h2 class="va-rv">상품에 관한 무엇이든<br>물어보세요</h2>
+    <div class="va-faq__list va-rv" data-va-faq>
+      <div class="va-faq__item is-open">
+        <button class="va-faq__q" type="button" aria-expanded="true">Q. 그냥 적금 드는 게 더 낫지 않나요?<img src="images/icon-chevron-down.svg" alt=""></button>
+        <div class="va-faq__a"><div><div class="va-faq__a-in"><span>A.</span><p>적금도 목돈을 모으는 좋은 상품이지만,<br>올인원598은 필요한 가전을 먼저 받아 사용하면서 목돈도 함께 준비할 수 있습니다.<br>또한 결혼·장례·크루즈 같은 전문 서비스로 손 쉽게 바꿔 쓸 수 있기 때문에<br>적금에 비해 혜택이 더 많은 상품입니다.</p></div></div></div>
+      </div>
+      <div class="va-faq__item">
+        <button class="va-faq__q" type="button" aria-expanded="false">Q. 납부기간이 너무 긴 거 아닌가요?<img src="images/icon-chevron-down.svg" alt=""></button>
+        <div class="va-faq__a"><div><div class="va-faq__a-in"><span>A.</span><p>[답변 내용을 입력해 주세요]</p></div></div></div>
+      </div>
+      <div class="va-faq__item">
+        <button class="va-faq__q" type="button" aria-expanded="false">Q. 중간에 해지하면 손해 아닌가요?<img src="images/icon-chevron-down.svg" alt=""></button>
+        <div class="va-faq__a"><div><div class="va-faq__a-in"><span>A.</span><p>[답변 내용을 입력해 주세요]</p></div></div></div>
+      </div>
+      <div class="va-faq__item">
+        <button class="va-faq__q" type="button" aria-expanded="false">Q. 오래 가입하면 나중에 서비스 가격도 오르지 않나요?<img src="images/icon-chevron-down.svg" alt=""></button>
+        <div class="va-faq__a"><div><div class="va-faq__a-in"><span>A.</span><p>[답변 내용을 입력해 주세요]</p></div></div></div>
+      </div>
+      <div class="va-faq__item">
+        <button class="va-faq__q" type="button" aria-expanded="false">Q. 상조상품이라 솔직히 좀 불안한데 괜찮나요?<img src="images/icon-chevron-down.svg" alt=""></button>
+        <div class="va-faq__a"><div><div class="va-faq__a-in"><span>A.</span><p>[답변 내용을 입력해 주세요]</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. 세일즈 링커 ============ -->
+  <section class="va-sales" data-va-seq>
+    <img class="va-sales__bg" src="images/sales-bg.svg" alt="">
+    <!-- 반짝이 · 떨어지는 동전 장식 -->
+    <div class="va-crop va-c va-hide-m va-spark" style="top:274.94px;margin-left:-329.28px;width:39.7px;height:40.9px;--d:0.00s"><img src="images/sales-hand.png" alt="" style="left:-420.1%;top:-1364.06%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:305.81px;margin-left:215px;width:22.83px;height:23.79px;--d:0.07s"><img src="images/sales-hand.png" alt="" style="left:-420.1%;top:-1364.06%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:222.07px;margin-left:-317.31px;width:33.4px;height:35.29px;--d:0.14s"><img src="images/sales-hand.png" alt="" style="left:-420.1%;top:-1364.06%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:225.5px;margin-left:-273.89px;width:39.7px;height:40.9px;--d:0.21s"><img src="images/sales-hand.png" alt="" style="left:-469.82%;top:-1244.55%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:136px;margin-left:246.45px;width:28.91px;height:29.48px;--d:0.28s"><img src="images/sales-hand.png" alt="" style="left:-2155.62%;top:-900.28%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:381px;margin-left:399.45px;width:28.91px;height:29.48px;--d:0.35s"><img src="images/sales-hand.png" alt="" style="left:-2213.46%;top:-1000.63%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:126.36px;margin-left:301.72px;width:47.72px;height:47.55px;--d:0.42s"><img src="images/sales-hand.png" alt="" style="left:-2213.46%;top:-1000.63%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-crop va-c va-hide-m va-spark" style="top:293px;margin-left:201.48px;width:25.13px;height:25.9px;--d:0.49s"><img src="images/sales-hand.png" alt="" style="left:-1408.45%;top:-1653.79%;width:2842.64%;height:1926.67%"></div>
+    <div class="va-coin va-c" style="--d:0.12s;--f:4.2s;top:526.38px;margin-left:-162.77px;width:57.94px;height:53.1px"><div style="width:31.64px;height:48.54px;transform:rotate(123.33deg)"><img src="images/sales-coins-fall.png" alt="" style="left:-167.92%;top:-24.59%;width:575.38%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.20s;--f:5.0s;top:329px;margin-left:-221.91px;width:51.34px;height:48.34px"><div style="width:51.34px;height:48.34px"><img src="images/sales-coins-fall.png" alt="" style="left:0;top:-24.59%;width:351.29%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.28s;--f:5.8s;top:528.41px;margin-left:325.86px;width:53.78px;height:53.11px"><div style="width:39.75px;height:37.43px;transform:rotate(33.31deg)"><img src="images/sales-coins-fall.png" alt="" style="left:0;top:-24.59%;width:351.29%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.36s;--f:4.2s;top:636.38px;margin-left:106.96px;width:48.71px;height:57.23px"><div style="width:31.64px;height:48.54px;transform:rotate(24.12deg)"><img src="images/sales-coins-fall.png" alt="" style="left:-167.92%;top:-24.59%;width:575.38%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.44s;--f:5.0s;top:405.43px;margin-left:198.44px;width:50.12px;height:48.75px"><div style="width:50.12px;height:48.75px"><img src="images/sales-coins-fall.png" alt="" style="left:-167.62%;top:-24.68%;width:364.72%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.52s;--f:5.8s;top:606.06px;margin-left:481.97px;width:67.76px;height:68.21px"><div style="width:50.12px;height:48.75px;transform:rotate(58.48deg)"><img src="images/sales-coins-fall.png" alt="" style="left:-167.62%;top:-24.68%;width:364.72%;height:149.18%"></div></div>
+    <div class="va-coin va-c" style="--d:0.60s;--f:4.2s;top:588.19px;margin-left:-462px;width:49.69px;height:48.33px"><div style="width:49.69px;height:48.33px"><img src="images/sales-coins-fall.png" alt="" style="left:-264.85%;top:-24.68%;width:364.72%;height:149.18%"></div></div>
+
+    <div class="va-sales__in">
+      <p class="va-sales__bubble">이렇게 좋은데, 혼자 아시게요?<span class="va-tail"><img src="images/tail-white.svg" alt=""></span></p>
+      <div class="va-sales__hand"><img src="images/sales-hand.png" alt="" loading="lazy"></div>
+      <div class="va-sales__title">
+        <p>소개만 해도 돈이 들어오는</p>
+        <p><span class="va-sales__gword">세일즈 링커</span>로 목돈도 마련해 보세요!</p>
+      </div>
+      <div class="va-sales__line"></div>
+      <div class="va-perks">
+        <div class="va-perk" style="--d:0s"><div class="va-crop" style="width:52px;height:55px"><img src="images/sales-char.png" alt="" style="left:-103.03%;top:-39.25%;width:305.08%;height:292.46%" loading="lazy"></div><p>보람상조피플 가전제품<br><b>결합상품을 가입한 누구나 OK</b></p></div>
+        <div class="va-perk" style="--d:.15s"><div class="va-crop" style="width:52px;height:44px"><img src="images/sales-money-hand.png" alt="" style="left:-25.57%;top:-15.87%;width:151.13%;height:131.75%" loading="lazy"></div><p>상담/계약 x<br><b>소개만 해도 수수료 지급</b></p></div>
+        <div class="va-perk" style="--d:.3s"><div class="va-crop" style="width:53px;height:52px"><img src="images/sales-coins.png" alt="" style="left:-125.93%;top:-19.32%;width:350.24%;height:136.6%" loading="lazy"></div><p><b>20만원</b>부터 <b>100만원</b>까지</p></div>
+      </div>
+      <p class="va-sales__note">※ 단, 본인 명의 계약 및 동일 주소 계약시 해당 안됨.</p>
+      <div class="va-sales__bottom va-rv" data-va-late>
+        <div class="va-crop va-sales__coins"><img src="images/sales-coins.png" alt="" style="left:-16.74%;top:-19.32%;width:350.24%;height:136.6%" loading="lazy"></div>
+        <p style="position:relative">매월 한 ~ 두 건만 소개해도</p>
+        <p style="position:relative" data-va-chars>아이 학원비, 부모님 용돈이 생깁니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11. 상담 CTA ============ -->
+  <section class="va-cta" id="va-cta">
+    <img class="va-cta__bg va-c" src="images/cta-bg.jpg" alt="" loading="lazy">
+    <div class="va-cta__in va-rv" data-va-late>
+      <img class="va-cta__glow" src="images/cta-glow.svg" alt="">
+      <div class="va-cta__head">
+        <p class="va-cta__eyebrow">상담은 무료! 지금 바로 상담해 보세요</p>
+        <p class="va-cta__t1">보람상조피플(주) 전문 상담,</p>
+        <p class="va-cta__t2">벨류 에셋이 상담해 드립니다.</p>
+      </div>
+      <div class="va-picks">
+        <div class="va-pick"><img src="images/picto-consult.svg" alt=""><p>쉽고, 빠르고<br>편한 상담</p><span class="va-tail"><img src="images/tail-white.svg" alt=""></span></div>
+        <div class="va-pick"><img src="images/picto-card.svg" alt=""><p>카드 등<br>추가 할인혜택</p><span class="va-tail"><img src="images/tail-white.svg" alt=""></span></div>
+        <div class="va-pick"><img src="images/picto-appliance.svg" alt=""><p>최신 가전<br>추천</p><span class="va-tail"><img src="images/tail-white.svg" alt=""></span></div>
+      </div>
+      <a class="va-btn va-btn--grad" href="#va-form" role="button" data-va-open-form>받을 수 있는 가전 확인하기</a>
+    </div>
+  </section>
+
+  <!-- ============ 하단 플로팅 CTA (스크립트가 <body> 바로 아래로 옮김) ============ -->
+  <a class="va-float" href="#va-form" role="button" data-va-open-form aria-hidden="true" tabindex="-1">나에게 맞는 라이프 서비스 상담신청</a>
+
+  <!-- ============ 상담 신청 모달 (스크립트가 <body> 바로 아래로 옮겨서 띄웁니다) ============ -->
+  <div class="va-modal" id="va-form" role="dialog" aria-modal="true" aria-labelledby="va-form-title" aria-hidden="true">
+    <div class="va-modal__dim" data-va-close></div>
+    <div class="va-modal__dialog" tabindex="-1">
+      <button class="va-modal__x" type="button" aria-label="닫기" data-va-close>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="va-modal__scroll">
+      <form class="va-form" novalidate data-va-form>
+        <div class="va-form__head">
+          <h2 id="va-form-title">당신의 미래를 위한 맞춤 설계</h2>
+          <p>상담 신청을 남겨주시면<br>상품 구성과 주요 혜택을 자세히 안내해 드립니다.</p>
+        </div>
+
+        <div class="va-field">
+          <label class="va-field__label" for="va-f-name">성함<em>*</em></label>
+          <input class="va-input" id="va-f-name" name="name" type="text" placeholder="예) 홍길동" autocomplete="name" maxlength="30" required>
+          <p class="va-field__err" data-err="name"></p>
+        </div>
+
+        <div class="va-field">
+          <label class="va-field__label" for="va-f-phone">전화번호<em>*</em></label>
+          <input class="va-input" id="va-f-phone" name="phone" type="tel" inputmode="numeric" placeholder="예) 010-1234-5678" autocomplete="tel" maxlength="13" required>
+          <p class="va-field__err" data-err="phone"></p>
+        </div>
+
+        <fieldset class="va-field">
+          <legend class="va-field__label">관심 상품 선택<em>*</em></legend>
+          <label class="va-opt"><input type="radio" name="product" value="올인원 1형(1구좌)"><span>올인원 1형(1구좌)</span></label>
+          <label class="va-opt"><input type="radio" name="product" value="올인원 2형(2구좌)"><span>올인원 2형(2구좌)</span></label>
+          <label class="va-opt"><input type="radio" name="product" value="올인원 3형(3구좌)"><span>올인원 3형(3구좌)</span></label>
+          <p class="va-field__err" data-err="product"></p>
+        </fieldset>
+
+        <div class="va-field">
+          <label class="va-field__label" for="va-f-ap1">희망가전 1<small>(선택)</small></label>
+          <div class="va-select">
+            <select class="va-input" id="va-f-ap1" name="appliance1" data-va-appliances></select>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 6.75L9 12.75L15 6.75" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="va-field">
+          <label class="va-field__label" for="va-f-ap2">희망가전 2<small>(선택)</small></label>
+          <div class="va-select">
+            <select class="va-input" id="va-f-ap2" name="appliance2" data-va-appliances></select>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 6.75L9 12.75L15 6.75" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="va-field">
+          <div class="va-agree">
+            <label class="va-agree__chk">
+              <input type="checkbox" name="agree" value="Y" required>
+              <svg width="11" height="9.2" viewBox="0 0 11 9.2" fill="none" aria-hidden="true"><path d="M1 4.13L5.33 8.2L10 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <b>필수</b><span>개인정보 수집 및 이용 동의</span>
+            </label>
+            <button class="va-agree__view" type="button" aria-expanded="false" aria-controls="va-f-privacy" data-va-privacy>보기</button>
+          </div>
+          <div class="va-privacy" id="va-f-privacy" hidden>
+            <p><b>수집 항목</b> 성함, 전화번호, 관심 상품, 희망가전</p>
+            <p><b>수집 목적</b> 상품 상담 및 안내 연락</p>
+            <p><b>보유 기간</b> 상담 완료 후 1년 (동의 철회 시 즉시 파기)</p>
+            <p>개인정보 수집·이용에 동의하지 않을 수 있으며, 동의하지 않으면 상담 신청이 제한됩니다.</p>
+          </div>
+          <p class="va-field__err" data-err="agree"></p>
+        </div>
+
+        <!-- 스팸 방지용(사람에게는 보이지 않음) -->
+        <input class="va-hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button class="va-submit" type="submit">맞춤설계 신청하기</button>
+        <p class="va-form__msg" role="alert" data-va-msg></p>
+      </form>
+
+      <div class="va-done" hidden data-va-done>
+        <div class="va-done__icon"><svg width="28" height="24" viewBox="0 0 11 9.2" fill="none"><path d="M1 4.13L5.33 8.2L10 1" stroke="#faa028" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>상담 신청이 완료되었습니다</h2>
+        <p>남겨주신 연락처로 담당자가<br>빠르게 연락드리겠습니다.</p>
+        <button class="va-submit" type="button" data-va-close>확인</button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  /* ================= 설정 ================= */
+  // 구글 Apps Script 웹 앱 URL (https://script.google.com/macros/s/.../exec). 비워두면 전송 없이 완료 화면만 보여줍니다(미리보기용).
+  var SHEET_ENDPOINT = '';
+  // 희망가전 선택지
+  var APPLIANCES = [
+    '해당없음',
+    '세라젬 의료침대 마스터',
+    '삼성 Bespke 양문형 냉장고 651L',
+    '로보락 Q revo Curv 로봇청소기',
+    'LG 퓨리케어 AI 360˚ 공기청정기 플러스',
+    'LG 휘센 오브제컬렉션 제습기25L',
+    'LG 휘센 AI 오브제컬렉션 쿨 에어컨 싱글',
+    'LG 디오스 오브제컬렉션 식기세척기',
+    '기타 (상담 시 안내)'
+  ];
+  var DRAFT_KEY = 'va-consult-draft-v1';
+  /* ======================================== */
+
+  var root = document.getElementById('va-landing');
+  if (!root) return;
+  root.classList.add('js');
+
+  /* ---- 1) 히어로 가전 캐러셀 (가운데 카드 확대, 자동 슬라이드) ---- */
+  var car = root.querySelector('[data-va-carousel]');
+  var reduceMotionHero = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (car) {
+    Array.prototype.slice.call(car.children).forEach(function(c){ var k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); car.appendChild(k); });
+    var cards = Array.prototype.slice.call(car.children);
+    var n = cards.length, active = +car.getAttribute('data-start') || 0;
+    var K = 437 / 337, GAP = 30, prevD = [], timer;
+    function rel(i){ var d = ((i - active) % n + n) % n; return d >= Math.ceil(n / 2) ? d - n : d; }
+    function layout(){
+      var w = cards[0].offsetWidth, h = cards[0].offsetHeight;
+      var gap = w < 300 ? 16 : GAP;
+      car.style.height = (h * K) + 'px';
+      cards.forEach(function(c, i){
+        var d = rel(i), x = 0;
+        if (d !== 0) x = (d > 0 ? 1 : -1) * (w * K / 2 + gap + w / 2 + (Math.abs(d) - 1) * (w + gap));
+        c.classList.toggle('is-jump', prevD[i] !== undefined && Math.abs(prevD[i] - d) > 1);
+        c.style.transform = 'translate(-50%,-50%) translateX(' + x + 'px) scale(' + (d === 0 ? K : 1) + ')';
+        c.style.zIndex = 10 - Math.abs(d);
+        c.setAttribute('aria-current', d === 0 ? 'true' : 'false');
+        prevD[i] = d;
+      });
+    }
+    function go(i){ active = (i + n) % n; layout(); }
+    function play(){ stop(); timer = setInterval(function(){ go(active + 1); }, 3000); }
+    function stop(){ clearInterval(timer); }
+    cards.forEach(function(c, i){ c.addEventListener('click', function(){ go(i); play(); }); });
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', play);
+    var sx = null;
+    car.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; stop(); }, {passive:true});
+    car.addEventListener('touchend', function(e){
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) go(active + (dx < 0 ? 1 : -1));
+      sx = null; play();
+    });
+    window.addEventListener('resize', layout);
+    layout();
+    cards.forEach(function(c, i){ c.style.setProperty('--cd', (1.6 + Math.min(Math.abs(rel(i)), 4) * .12).toFixed(2) + 's'); });
+    var hero = root.querySelector('.va-hero');
+    requestAnimationFrame(function(){ hero.classList.add('is-in'); });
+    setTimeout(play, reduceMotionHero ? 0 : 2800);
+  }
+
+  /* ---- 2) 보람몰 카드 무한 흐름 (트랙 복제) ---- */
+  var track = root.querySelector('[data-va-marquee]');
+  if (track) {
+    Array.prototype.slice.call(track.children).forEach(function(el){
+      var c = el.cloneNode(true); c.setAttribute('aria-hidden', 'true'); track.appendChild(c);
+    });
+    // 모바일용 두 번째 줄(반대 방향). 데스크톱에서는 CSS로 숨김
+    var row = track.parentNode, row2 = row.cloneNode(true);
+    row2.classList.add('va-marquee--2'); row2.setAttribute('aria-hidden', 'true');
+    row.parentNode.insertBefore(row2, row.nextSibling);
+  }
+
+  /* ---- 3) FAQ 아코디언 ---- */
+  var faq = root.querySelector('[data-va-faq]');
+  if (faq) {
+    faq.addEventListener('click', function(e){
+      var btn = e.target.closest('.va-faq__q'); if (!btn) return;
+      var item = btn.parentNode, open = !item.classList.contains('is-open');
+      faq.querySelectorAll('.va-faq__item').forEach(function(it){
+        it.classList.remove('is-open'); it.querySelector('.va-faq__q').setAttribute('aria-expanded', 'false');
+      });
+      if (open) { item.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  }
+
+  /* ---- 4) 스크롤 등장 효과 ---- */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 곡선: 하나의 진행값으로 리본(마스크)을 그리고 빛을 경로 위 같은 지점에 놓아 항상 함께 움직이게 함
+  function startDraw(svg){
+    var draw = svg.querySelector('.va-curve__draw'), dot = svg.querySelector('.va-curve__dot');
+    if (reduceMotion || !draw.getTotalLength) { draw.style.strokeDashoffset = 0; return; }
+    var DUR = 4000, len = draw.getTotalLength(), t0 = null;
+    function ease(t){ return -(Math.cos(Math.PI * t) - 1) / 2; }               // ease-in-out sine
+    function smooth(a, b, x){ x = Math.min(1, Math.max(0, (x - a) / (b - a))); return x * x * (3 - 2 * x); }
+    function frame(now){
+      if (t0 === null) t0 = now;
+      var t = Math.min(1, (now - t0) / DUR), p = ease(t);
+      draw.style.strokeDashoffset = 1 - p;
+      var pt = draw.getPointAtLength(p * len);
+      dot.setAttribute('transform', 'translate(' + pt.x + ' ' + pt.y + ')');
+      dot.setAttribute('opacity', (smooth(0, .15, t) * (1 - smooth(.78, 1, t))).toFixed(3));
+      if (t < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  // '누적 회원 340만 명': 문장이 나타날 때 0→340 카운트, 하이라이트가 끝나면 한 번 튀어오르며 강조
+  function startSince(box){
+    var num = box.querySelector('[data-va-count]'), wrap = box.querySelector('.va-since__num');
+    if (!num || reduceMotion) return;
+    var target = +num.getAttribute('data-va-count');
+    num.style.minWidth = num.offsetWidth + 'px';   // 숫자 자릿수가 바뀌어도 문장이 흔들리지 않게
+    num.textContent = '0';
+    setTimeout(function(){
+      var t0 = null, DUR = 700;
+      function tick(now){
+        if (t0 === null) t0 = now;
+        var t = Math.min(1, Math.max(0, (now - t0) / DUR));
+        num.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));   // ease-out cubic
+        if (t < 1) requestAnimationFrame(tick);
+        else { wrap.classList.add('is-pop'); num.style.minWidth = ''; }
+      }
+      requestAnimationFrame(tick);
+    }, 1175);
+  }
+  // data-va-chars: 글자 단위로 쪼개기 (단어는 묶어서 줄바꿈이 단어 사이에서만 일어나게)
+  root.querySelectorAll('[data-va-chars]').forEach(function(el){
+    var text = el.textContent.trim(), i = 0;
+    el.setAttribute('aria-label', text);
+    el.innerHTML = text.split(' ').map(function(w){
+      var chars = Array.from(w).map(function(c){
+        return '<span class="va-ch" style="--i:' + (i++) + '">' + c.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</span>';
+      }).join('');
+      i++;   // 단어 사이 짧은 쉼
+      return '<span class="va-wd" aria-hidden="true">' + chars + '</span>';
+    }).join(' ');
+  });
+  // data-va-drift: 스크롤 위치에 맞춰 좌우로 천천히 이동 (값 = 최대 이동 px, 음수면 왼쪽)
+  var drifts = Array.prototype.slice.call(root.querySelectorAll('[data-va-drift]'));
+  if (drifts.length && !reduceMotion) {
+    var driftTick = false;
+    function drift(){
+      driftTick = false;
+      var vh = window.innerHeight;
+      drifts.forEach(function(el){
+        var r = el.parentNode.getBoundingClientRect();
+        var p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));   // 화면 아래 진입 0 → 위로 사라짐 1
+        el.style.translate = (p * +el.getAttribute('data-va-drift')).toFixed(1) + 'px 0';
+      });
+    }
+    window.addEventListener('scroll', function(){ if (!driftTick) { driftTick = true; requestAnimationFrame(drift); } }, {passive:true});
+    window.addEventListener('resize', drift);
+    drift();
+  }
+
+  // 고객 공감 무대 축소: 섹션 높이 / 디자인 높이(1149), 최대 1배
+  var famSec = root.querySelector('.va-family');
+  if (famSec) {
+    var fitFamily = function(){
+      var k = window.innerWidth > 768 ? Math.min(1, famSec.offsetHeight / 1149) : 1;
+      famSec.style.setProperty('--va-fk', k.toFixed(4));
+      famSec.classList.toggle('is-fit', k < .999);
+    };
+    window.addEventListener('resize', fitFamily);
+    fitFamily();
+  }
+
+  // 고객 공감 핀 + 스크럽
+  var pin = root.querySelector('[data-va-pin]');
+  if (pin && !reduceMotion) {
+    var fam = pin.querySelector('.va-family'), quotes = Array.prototype.slice.call(fam.querySelectorAll('.va-quote'));
+    var people = fam.querySelector('.va-family__people');
+    var wide = window.matchMedia('(min-width: 769px)'), pinTop = 0, ticking = false;
+    // 상위 요소에 overflow 가 걸려 있으면 sticky 가 동작하지 않으므로 핀을 끄고 일반 등장 효과로 대체
+    function stickyBlocked(){
+      for (var el = pin.parentElement; el && el !== document.body && el !== document.documentElement; el = el.parentElement) {
+        var cs = getComputedStyle(el);
+        if (/hidden|auto|scroll/.test(cs.overflowX + ' ' + cs.overflowY)) return true;
+      }
+      return false;
+    }
+    function scrub(){
+      ticking = false;
+      if (!pin.classList.contains('is-on')) return;
+      var dist = pin.offsetHeight - fam.offsetHeight;
+      var p = Math.min(1, Math.max(0, (pinTop - pin.getBoundingClientRect().top) / dist));
+      // 1) 첫 스크롤 구간: 흐린 인물 → 선명하게 (opacity 1)
+      var pe = Math.min(1, p / .16); pe = 1 - Math.pow(1 - pe, 3);
+      people.style.opacity = (.35 + .65 * pe).toFixed(3);
+      people.style.filter = pe < 1 ? 'blur(' + ((1 - pe) * 12).toFixed(2) + 'px)' : 'none';
+      // 2) 이어서 말풍선 하나씩
+      quotes.forEach(function(q, i){
+        var start = .16 + i * .25, l = Math.min(1, Math.max(0, (p - start) / .2)), e = 1 - Math.pow(1 - l, 3);
+        q.style.opacity = e.toFixed(3);
+        q.style.transform = 'translateY(' + ((1 - e) * 50).toFixed(1) + 'px)';
+        q.style.filter = e < 1 ? 'blur(' + ((1 - e) * 8).toFixed(2) + 'px)' : 'none';
+      });
+    }
+    function setupPin(){
+      var on = wide.matches && !stickyBlocked();
+      pin.classList.toggle('is-on', on);
+      fam.classList.toggle('is-scrub', on);
+      // 섹션(1149px)이 화면보다 크면 아래쪽(인물)을 맞추되, 첫 말풍선이 잘리지 않게 최대 140px 까지만 올림
+      pinTop = Math.max(window.innerHeight - fam.offsetHeight, -140);
+      fam.style.setProperty('--va-pin-top', '0px');
+      if (on) scrub();
+      else quotes.concat(people).forEach(function(q){ q.style.opacity = q.style.transform = q.style.filter = ''; });
+    }
+    window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(scrub); } }, {passive:true});
+    window.addEventListener('resize', setupPin);
+    setupPin();
+  }
+  // data-va-num: 0부터 목표값까지 숫자 카운트 (data-va-delay / data-va-dur ms, data-va-fmt="jo" 는 '1조 5,247' 형식)
+  function countUp(box){
+    if (reduceMotion) return;
+    box.querySelectorAll('[data-va-num]').forEach(function(n){
+      var to = +n.getAttribute('data-va-num'), jo = n.getAttribute('data-va-fmt') === 'jo';
+      var delay = +(n.getAttribute('data-va-delay') || 0), dur = +(n.getAttribute('data-va-dur') || 1200);
+      var fmt = function(v){ return jo && v >= 10000 ? Math.floor(v / 10000) + '조 ' + (v % 10000).toLocaleString('en-US') : v.toLocaleString('en-US'); };
+      n.style.minWidth = n.offsetWidth + 'px';   // 자릿수가 바뀌어도 줄이 흔들리지 않게
+      n.style.textAlign = 'right';
+      n.textContent = '0';
+      setTimeout(function(){
+        var t0 = null;
+        function tick(now){
+          if (t0 === null) t0 = now;
+          var t = Math.min(1, Math.max(0, (now - t0) / dur));
+          n.textContent = fmt(Math.round(to * (1 - Math.pow(1 - t, 4))));   // ease-out quart
+          if (t < 1) requestAnimationFrame(tick); else { n.style.minWidth = ''; n.style.textAlign = ''; }
+        }
+        requestAnimationFrame(tick);
+      }, delay);
+    });
+  }
+  function reveal(el){
+    el.classList.add('in');
+    if (el.hasAttribute('data-va-draw')) startDraw(el);
+    var after = el.getAttribute('data-va-then-draw');   // 카드가 다 올라온 뒤 곡선 모션 패스 시작
+    if (after && document.querySelector(after)) setTimeout(function(){ startDraw(document.querySelector(after)); }, reduceMotion ? 0 : 1000);
+    if (el.hasAttribute('data-va-since')) startSince(el);
+    if (el.hasAttribute('data-va-counter')) countUp(el);
+    var scope = el.getAttribute('data-va-scope');   // 이 요소가 보이면 지정한 상위 영역 전체 연출을 시작
+    if (scope && el.closest(scope)) el.closest(scope).classList.add('is-in');
+  }
+  // 세일즈 링커: 단계를 차례대로 실행. 각 단계는 앞 단계가 거의 끝나고 + 그 요소가 화면에 보일 때 시작
+  var seqSec = root.querySelector('[data-va-seq]');
+  if (seqSec) {
+    var q = function(sel){ return seqSec.querySelector(sel); };
+    var steps = [
+      ['deco',   q('.va-sales__hand'),   425],   // [단계, 보여야 하는 요소, 다음 단계까지 ms]
+      ['hand',   q('.va-sales__hand'),   425],
+      ['bubble', q('.va-sales__bubble'), 300],
+      ['title',  q('.va-sales__title'), 1300],
+      ['line',   q('.va-sales__line'),   375],
+      ['perks',  q('.va-perks'),        1200]
+    ];
+    var finishSeq = function(){ steps.forEach(function(st){ seqSec.classList.add('st-' + st[0]); }); seqSec.classList.add('is-idle'); };
+    if (reduceMotion || !('IntersectionObserver' in window)) finishSeq();
+    else {
+      var whenVisible = function(el, cb){
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * .88 && r.bottom > 0) { cb(); return; }   // 이미 화면에 있으면 바로
+        var o = new IntersectionObserver(function(es){ if (es[0].isIntersecting) { o.disconnect(); cb(); } }, {rootMargin:'0px 0px -12% 0px'});
+        o.observe(el);
+      };
+      var run = function(k){
+        if (k >= steps.length) { seqSec.classList.add('is-idle'); return; }
+        whenVisible(steps[k][1], function(){
+          seqSec.classList.add('st-' + steps[k][0]);
+          setTimeout(function(){ run(k + 1); }, steps[k][2]);
+        });
+      };
+      run(0);
+    }
+  }
+
+  var els = root.querySelectorAll('.va-rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { io.unobserve(en.target); reveal(en.target); } });
+    }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    // data-va-late: 화면 아래에서 18% 정도 더 올라왔을 때 시작 (모션이 끝까지 보이도록)
+    var ioLate = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { ioLate.unobserve(en.target); reveal(en.target); } });
+    }, {threshold:0, rootMargin:'0px 0px -18% 0px'});
+    els.forEach(function(el){ (el.hasAttribute('data-va-late') ? ioLate : io).observe(el); });
+  } else {
+    els.forEach(reveal);
+  }
+
+  /* ---- 5) 상담 신청 모달 + 작성 내용 유지 + 구글 시트 전송 ---- */
+  var modal = document.getElementById('va-form');
+  if (modal) {
+    document.body.appendChild(modal);   // 아임웹 컨테이너의 transform/overflow 영향 피하기
+
+    // 하단 플로팅 CTA: 히어로를 지나면 나타나고, 맨 아래 상담 영역이 보이면 숨김
+    var fl = root.querySelector('.va-float');
+    if (fl) {
+      document.body.appendChild(fl);
+      var heroEl = root.querySelector('.va-hero'), ctaEl = root.querySelector('.va-cta'), flTick = false, flShown = null;
+      var updFloat = function(){
+        flTick = false;
+        var vh = window.innerHeight;
+        var heroIn = heroEl && heroEl.getBoundingClientRect().bottom > vh * .4;   // 히어로가 화면 위쪽 40% 안에 남아 있으면 숨김
+        var ctaIn = ctaEl && ctaEl.getBoundingClientRect().top < vh * .85;        // 맨 아래 상담 영역이 보이기 시작하면 숨김
+        var show = !heroIn && !ctaIn;
+        if (show === flShown) return;
+        flShown = show;
+        fl.classList.toggle('is-show', show);
+        fl.setAttribute('aria-hidden', show ? 'false' : 'true');
+        fl.tabIndex = show ? 0 : -1;
+      };
+      window.addEventListener('scroll', function(){ if (!flTick) { flTick = true; requestAnimationFrame(updFloat); } }, {passive:true});
+      window.addEventListener('resize', updFloat);
+      updFloat();
+    }
+    var dialog = modal.querySelector('.va-modal__dialog');
+    var scroller = modal.querySelector('.va-modal__scroll');
+    var form = modal.querySelector('[data-va-form]');
+    var done = modal.querySelector('[data-va-done]');
+    var msg = modal.querySelector('[data-va-msg]');
+    var submitBtn = form.querySelector('.va-submit');
+    var agreeBox = form.querySelector('.va-agree');
+    var lastFocus = null;
+
+    // 희망가전 목록
+    form.querySelectorAll('[data-va-appliances]').forEach(function(sel){
+      sel.innerHTML = '<option value="">선택</option>' + APPLIANCES.map(function(a){ return '<option>' + a + '</option>'; }).join('');
+    });
+
+    // 임시 저장(모달을 닫거나 새로고침해도 작성 내용 유지)
+    var FIELDS = ['name', 'phone', 'product', 'appliance1', 'appliance2', 'agree'];
+    function readForm(){
+      var d = {};
+      FIELDS.forEach(function(k){
+        var el = form.elements[k];
+        if (k === 'agree') d[k] = el.checked ? 'Y' : '';
+        else d[k] = (el.value || '').trim();
+      });
+      return d;
+    }
+    function saveDraft(){ try { localStorage.setItem(DRAFT_KEY, JSON.stringify(readForm())); } catch (e) {} }
+    function clearDraft(){ try { localStorage.removeItem(DRAFT_KEY); } catch (e) {} }
+    function restoreDraft(){
+      var d; try { d = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) {}
+      if (!d) return;
+      FIELDS.forEach(function(k){
+        if (d[k] === undefined) return;
+        var el = form.elements[k];
+        if (k === 'agree') el.checked = d[k] === 'Y';
+        else if (k === 'product') form.querySelectorAll('[name=product]').forEach(function(r){ r.checked = r.value === d[k]; });
+        else el.value = d[k];
+      });
+    }
+    function syncUI(){
+      agreeBox.classList.toggle('is-on', form.elements.agree.checked);
+      form.querySelectorAll('.va-select select').forEach(function(s){ s.classList.toggle('is-empty', !s.value); });
+    }
+
+    // 전화번호 자동 하이픈
+    function fmtPhone(v){
+      v = v.replace(/\D/g, '').slice(0, 11);
+      if (v.indexOf('02') === 0) return v.replace(/^(02)(\d{0,4})(\d{0,4}).*/, function(m,a,b,c){ return [a,b,c].filter(Boolean).join('-'); });
+      if (v.length < 4) return v;
+      if (v.length < 8) return v.replace(/^(\d{3})(\d+)/, '$1-$2');
+      if (v.length < 11) return v.replace(/^(\d{3})(\d{3})(\d+)/, '$1-$2-$3');
+      return v.replace(/^(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+    }
+    form.elements.phone.addEventListener('input', function(){ this.value = fmtPhone(this.value); });
+
+    // 검증
+    function setErr(name, text){
+      var p = form.querySelector('[data-err="' + name + '"]');
+      if (!p) return;
+      p.textContent = text || '';
+      p.closest('.va-field').classList.toggle('is-err', !!text);
+    }
+    function validate(d, only){
+      var errs = {
+        name: d.name.length < 2 ? '성함을 입력해 주세요.' : '',
+        phone: !/^0\d{1,2}-?\d{3,4}-?\d{4}$/.test(d.phone) ? '전화번호를 정확히 입력해 주세요.' : '',
+        product: !d.product ? '관심 상품을 선택해 주세요.' : '',
+        agree: !d.agree ? '개인정보 수집 및 이용에 동의해 주세요.' : ''
+      };
+      var first = null;
+      Object.keys(errs).forEach(function(k){
+        if (only && only !== k) return;
+        setErr(k, errs[k]);
+        if (errs[k] && !first) first = k;
+      });
+      return first;
+    }
+
+    form.addEventListener('input', function(e){
+      saveDraft(); syncUI();
+      var n = e.target.name;
+      if (n && e.target.closest('.va-field.is-err')) validate(readForm(), n);   // 오류 표시 중인 칸은 고치는 즉시 해제
+    });
+    form.addEventListener('change', function(e){
+      saveDraft(); syncUI();
+      var n = e.target.name;
+      if (n && e.target.closest('.va-field.is-err')) validate(readForm(), n);
+    });
+
+    // 개인정보 '보기'
+    var privBtn = form.querySelector('[data-va-privacy]');
+    privBtn.addEventListener('click', function(){
+      var box = document.getElementById('va-f-privacy'), open = box.hasAttribute('hidden');
+      box.toggleAttribute('hidden', !open);
+      privBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      privBtn.textContent = open ? '닫기' : '보기';
+    });
+
+    // 열기 / 닫기
+    function openModal(e){
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      if (!done.hasAttribute('hidden')) { done.setAttribute('hidden', ''); form.removeAttribute('hidden'); }
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.add('va-lock');
+      scroller.scrollTop = 0;
+      setTimeout(function(){ (form.elements.name.value ? dialog : form.elements.name).focus({preventScroll:true}); }, 50);
+    }
+    function closeModal(){
+      saveDraft();
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.classList.remove('va-lock');
+      if (lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+    }
+    document.querySelectorAll('[data-va-open-form]').forEach(function(b){ b.addEventListener('click', openModal); });
+    modal.addEventListener('click', function(e){ if (e.target.closest('[data-va-close]')) closeModal(); });
+    document.addEventListener('keydown', function(e){
+      if (!modal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Tab') {   // 포커스가 모달 밖으로 나가지 않게
+        var f = Array.prototype.filter.call(dialog.querySelectorAll('button,input,select,a[href]'), function(el){ return !el.disabled && el.offsetParent !== null && el.tabIndex !== -1; });
+        if (!f.length) return;
+        if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+        else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+      }
+    });
+    if (location.hash === '#va-form') openModal();
+
+    // 전송
+    var sending = false;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (sending) return;
+      msg.textContent = '';
+      var d = readForm();
+      var bad = validate(d);
+      if (bad) {
+        var el = bad === 'product' ? form.querySelector('[name=product]') : form.elements[bad];
+        (el.length ? el[0] : el).focus();
+        return;
+      }
+      if (form.elements.company.value) { finish(); return; }   // 스팸 봇
+
+      d.submittedAt = new Date().toLocaleString('ko-KR', {hour12:false});
+      d.page = location.href;
+      d.referrer = document.referrer;
+      d.userAgent = navigator.userAgent;
+
+      if (!SHEET_ENDPOINT) {
+        console.warn('[va-form] SHEET_ENDPOINT 가 비어 있어 시트로 전송하지 않았습니다(미리보기 모드).', d);
+        finish(); return;
+      }
+      sending = true; submitBtn.disabled = true; submitBtn.textContent = '신청 중...';
+      // Apps Script 웹 앱은 CORS 응답을 주지 않으므로 no-cors 로 전송(응답 본문은 읽지 않음)
+      fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(d) })
+        .then(finish)
+        .catch(function(){ msg.textContent = '전송에 실패했습니다. 네트워크 상태를 확인하고 다시 시도해 주세요.'; })
+        .then(function(){ sending = false; submitBtn.disabled = false; submitBtn.textContent = '맞춤설계 신청하기'; });
+    });
+    function finish(){
+      form.reset(); clearDraft(); syncUI();
+      ['name','phone','product','agree'].forEach(function(k){ setErr(k, ''); });
+      form.setAttribute('hidden', '');
+      done.removeAttribute('hidden');
+      scroller.scrollTop = 0; dialog.focus({preventScroll:true});
+    }
+
+    restoreDraft(); syncUI();
+  }
+})();
+</script>
+<!-- ===================== 아임웹 붙여넣기 끝 ===================== -->
+
+</body>
+</html>
