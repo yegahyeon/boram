@@ -721,10 +721,11 @@
   /* 모바일 고객 공감: 화면 한 장 높이, 사진은 아래에 깔고 말풍선은 위쪽 하늘 영역에 지그재그 */
   .va-family__stage{position:static;width:auto;height:auto;margin:0;transform:none}
   .va-family{height:100vh;height:100svh;min-height:560px;max-height:900px;padding:0}
-  .va-family__photo,.va-family__people{position:absolute;left:50%;top:auto;width:900px;height:auto;transform:translateX(-40%)}
+  /* 사진을 화면 높이에 비례해 키워 가운데 빈 하늘을 줄임. 인물(사진 폭의 약 35% 지점)이 화면 왼쪽 182px 근처에 오도록 고정 */
+  .va-family__photo,.va-family__people{position:absolute;left:182px;top:auto;width:clamp(900px,135svh,1250px);height:auto;transform:translateX(-35%)}
   .va-family__photo{bottom:3px;margin:0}
-  .va-family__people{bottom:0;margin:0;width:910px}
-  .va-family__quotes{position:absolute;left:0;right:0;top:0;z-index:1;display:flex;flex-direction:column;gap:clamp(14px,3.8svh,36px);padding:clamp(48px,13svh,130px) 20px 0}
+  .va-family__people{bottom:0;margin:0;width:calc(clamp(900px,135svh,1250px) * 1.0113)}
+  .va-family__quotes{position:absolute;left:0;right:0;top:0;z-index:1;display:flex;flex-direction:column;gap:var(--fq-gap,56px);padding:var(--fq-pt,60px) var(--fq-px,20px) 0}
   .va-quote{position:relative;left:auto!important;top:auto!important;margin:0!important;max-width:330px;gap:8px;font-size:14.5px;line-height:1.45;white-space:normal}
   .va-quote:nth-child(1),.va-quote:nth-child(3){align-self:flex-end}
   .va-quote:nth-child(2){align-self:flex-start}
@@ -828,6 +829,26 @@
   .va-pick .va-tail{top:123px;transform:scaleY(-1) scale(.7)}
   .va-btn--grad{width:100%;font-size:17px;padding:16px}
 }
+/* ===== 모바일 고객 공감 말풍선 여백 (숫자만 바꾸면 됩니다) =====
+   --fq-pt  : 위쪽 패딩 (섹션 맨 위 ~ 첫 번째 말풍선)
+   --fq-gap : 말풍선 사이 간격
+   --fq-px  : 좌우 패딩 */
+@media (max-width:768px){
+  .va-family__quotes{--fq-pt:150px;--fq-gap:80px;--fq-px:20px}
+}
+/* 세로가 짧은 폰 (예: iPhone SE 667px) */
+@media (max-width:768px) and (max-height:740px){
+  .va-family__quotes{--fq-pt:36px;--fq-gap:34px}
+}
+/* 세로가 긴 폰 (예: 900px 이상) */
+@media (max-width:768px) and (min-height:860px){
+  .va-family__quotes{--fq-pt:80px;--fq-gap:70px}
+}
+/* 아주 좁은 폰 (360px 이하) */
+@media (max-width:360px){
+  .va-family__quotes{--fq-px:14px}
+}
+
 /* ================= 상담 신청 모달 (body 바로 아래로 이동되므로 .va 밖에서도 동작하도록 독립 스코프) ================= */
 .va-modal{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;padding:16px;font-family:'Pretendard','SUIT',-apple-system,sans-serif;color:#222;line-height:normal;word-break:keep-all;-webkit-font-smoothing:antialiased}
 .va-modal.is-open{display:flex}
