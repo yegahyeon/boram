@@ -28,7 +28,15 @@ var COLUMNS = [
   ['개인정보 동의',  function (p) { return p.agree === 'Y' ? '동의' : ''; }],
   ['신청 페이지',    function (p) { return p.page; }],
   ['유입 경로',      function (p) { return p.referrer; }],
-  ['기기 정보',      function (p) { return p.userAgent; }]
+  ['기기 정보',      function (p) { return p.userAgent; }],
+  ['UTM Source',     function (p) { return p.utm_source; }],
+  ['UTM Medium',     function (p) { return p.utm_medium; }],
+  ['UTM Campaign',   function (p) { return p.utm_campaign; }],
+  ['UTM Term',       function (p) { return p.utm_term; }],
+  ['UTM Content',    function (p) { return p.utm_content; }],
+  ['Landing URL',    function (p) { return p.landing_url; }],
+  ['Device Type',    function (p) { return p.device_type; }],
+  ['Time on Page',   function (p) { return p.time_on_page ? Number(p.time_on_page) : ''; }]   // 초 단위
 ];
 
 function doPost(e) {
@@ -68,6 +76,13 @@ function getSheet_() {
     sheet.setFrozenRows(1);
     sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight('bold').setBackground('#feebd2');
     sheet.getRange('C:C').setNumberFormat('@');   // 전화번호 앞자리 0 유지
+  } else {
+    // 이미 쓰던 시트라면 새로 추가된 열(UTM 등)의 제목만 빈 칸에 채워 넣음 (기존 제목·데이터는 그대로)
+    var lastCol = Math.max(sheet.getLastColumn(), COLUMNS.length);
+    var header = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+    COLUMNS.forEach(function (c, i) {
+      if (!header[i]) sheet.getRange(1, i + 1).setValue(c[0]).setFontWeight('bold').setBackground('#feebd2');
+    });
   }
   return sheet;
 }
